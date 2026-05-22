@@ -1,0 +1,29 @@
+time_range:
+  start_date: "2021-01-01"
+  end_date: "2026-01-01"
+
+companies:
+  - company: JYP
+    ticker: "035900.KQ"
+    groups:
+      - TWICE
+      - Stray Kids
+  - company: SM
+    ticker: "041510.KQ"
+    groups:
+      - aespa
+      - NCT
+      - EXO
+  - company: YG
+    ticker: "122870.KQ"
+    groups:
+      - BLACKPINK
+      - BIGBANG
+  - company: HYBE
+    ticker: "352820.KS"
+    groups:
+      - BTS
+      - SEVENTEEN
+      - NewJeans
+      - LE SSERAFIM
+

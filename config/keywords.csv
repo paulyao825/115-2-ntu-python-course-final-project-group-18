@@ -1,0 +1,13 @@
+event_id,company,ticker,group,member,event_category,keyword_ko,keyword_en,keyword_zh,naver_query,google_trends_query,youtube_query,start_date,end_date
+JYP_TWICE_TEMPLATE,JYP,035900.KQ,TWICE,,comeback,트와이스 컴백,TWICE comeback,TWICE 回歸,트와이스 컴백,TWICE comeback,TWICE official,2021-01-01,2026-01-01
+JYP_SKZ_TEMPLATE,JYP,035900.KQ,Stray Kids,,concert,스트레이키즈 콘서트,Stray Kids concert,Stray Kids 演唱會,스트레이키즈 콘서트,Stray Kids concert,Stray Kids official,2021-01-01,2026-01-01
+SM_AESPA_TEMPLATE,SM,041510.KQ,aespa,,comeback,에스파 컴백,aespa comeback,aespa 回歸,에스파 컴백,aespa comeback,aespa official,2021-01-01,2026-01-01
+SM_NCT_TEMPLATE,SM,041510.KQ,NCT,,activity,NCT 활동,NCT activity,NCT 活動,NCT 활동,NCT activity,NCT official,2021-01-01,2026-01-01
+SM_EXO_TEMPLATE,SM,041510.KQ,EXO,,contract_member,엑소 계약,EXO contract,EXO 合約,엑소 계약,EXO contract,EXO official,2021-01-01,2026-01-01
+YG_BLACKPINK_TEMPLATE,YG,122870.KQ,BLACKPINK,,dating,블랙핑크 열애설,BLACKPINK dating rumor,BLACKPINK 戀愛傳聞,블랙핑크 열애설,BLACKPINK dating rumor,BLACKPINK official,2021-01-01,2026-01-01
+YG_BIGBANG_TEMPLATE,YG,122870.KQ,BIGBANG,,comeback,빅뱅 컴백,BIGBANG comeback,BIGBANG 回歸,빅뱅 컴백,BIGBANG comeback,BIGBANG official,2021-01-01,2026-01-01
+HYBE_BTS_TEMPLATE,HYBE,352820.KS,BTS,,military,방탄소년단 군대,BTS military,BTS 入伍,방탄소년단 군대,BTS military,BTS official,2021-01-01,2026-01-01
+HYBE_SVT_TEMPLATE,HYBE,352820.KS,SEVENTEEN,,concert,세븐틴 콘서트,SEVENTEEN concert,SEVENTEEN 演唱會,세븐틴 콘서트,SEVENTEEN concert,SEVENTEEN official,2021-01-01,2026-01-01
+HYBE_NJ_TEMPLATE,HYBE,352820.KS,NewJeans,,legal_dispute,뉴진스 소송,NewJeans legal dispute,NewJeans 法律爭議,뉴진스 소송,NewJeans legal dispute,NewJeans official,2021-01-01,2026-01-01
+HYBE_LSF_TEMPLATE,HYBE,352820.KS,LE SSERAFIM,,PR_crisis,르세라핌 논란,LE SSERAFIM controversy,LE SSERAFIM 爭議,르세라핌 논란,LE SSERAFIM controversy,LE SSERAFIM official,2021-01-01,2026-01-01
+

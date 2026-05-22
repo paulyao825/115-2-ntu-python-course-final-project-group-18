@@ -1,0 +1,32 @@
+event_categories:
+  - dating
+  - concert
+  - PR_crisis
+  - activity
+  - contract_member
+  - comeback
+  - military
+  - health_hiatus
+  - legal_dispute
+  - achievement
+  - market_confounder
+
+sentiment_expected:
+  - positive
+  - negative
+  - mixed
+  - neutral
+
+status:
+  - not_started
+  - collecting
+  - needs_review
+  - complete
+  - excluded
+
+source_levels:
+  - A_official
+  - B_korean_news
+  - C_platform_data
+  - D_secondary
+

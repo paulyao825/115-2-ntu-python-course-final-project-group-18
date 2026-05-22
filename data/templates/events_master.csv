@@ -1,0 +1,2 @@
+event_id,company,ticker,group,member,event_category,event_subtype,event_title_en,event_title_zh,event_title_ko,start_date,peak_date,end_date,duration_days,event_window_before_days,event_window_after_days,sentiment_expected,severity_score,source_level,official_source_url,naver_source_url,notes,collector,status
+

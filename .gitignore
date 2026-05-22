@@ -1,0 +1,25 @@
+# Secrets and local environment
+.env
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated data outputs
+data/raw/
+data/processed/
+data/final/
+outputs/
+
+# Local archives and temp files
+*.zip
+*.tmp
+*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
