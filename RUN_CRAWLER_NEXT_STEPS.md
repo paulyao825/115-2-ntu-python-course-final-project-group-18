@@ -42,7 +42,7 @@ YOUTUBE_API_KEY=
 data/templates/events_master.csv
 ```
 
-目前已先整理五個女團各 5 筆事件：
+目前已先整理五個女團各 15 筆事件：
 
 ```text
 TWICE

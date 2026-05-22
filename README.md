@@ -25,7 +25,7 @@ K-pop 偶像事件、社群熱度與娛樂公司股價波動之關聯性分析
 ## 建議執行順序
 
 1. 複製 `.env.example` 成 `.env`，填入 Naver 與 YouTube API key。
-2. 檢查 `data/templates/events_master.csv` 的 25 筆女團事件。
+2. 檢查 `data/templates/events_master.csv` 的 75 筆女團事件。
 3. 檢查 `config/keywords.csv` 的事件級 crawler 關鍵字。
 4. 執行 crawler 收集 Naver、Google Trends、YouTube 熱度資料。
 5. 執行 `scripts/build_daily_traffic.py` 建立每日事件流量資料。
