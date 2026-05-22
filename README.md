@@ -17,6 +17,7 @@ K-pop 偶像事件、社群熱度與娛樂公司股價波動之關聯性分析
 ## 主要內容
 
 - `DATA_COLLECTION_STANDARD.md`：給教授與組員看的資料蒐集計畫書／標準。
+- `DATA_STATUS_SUMMARY.md`：目前事件清單、已抓 raw data 數量、可分析性與下一步。
 - `config/`：研究對象、事件分類、關鍵字設定。
 - `data/templates/`：CSV 欄位模板，後續直接用 GitHub 管理版本。
 - `scripts/`：Python crawler 與資料驗證腳本。
