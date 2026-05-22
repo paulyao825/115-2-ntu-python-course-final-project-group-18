@@ -27,18 +27,27 @@ aespa          15
 
 ## 二、目前已抓取資料狀態
 
-注意：目前 `data/raw/` 和 `data/final/` 裡的正式 crawl 結果，是在事件清單還是 25 筆時抓取的。  
-事件清單已更新成 75 筆後，需要重新跑 crawler，才會得到完整 75 筆事件版本的 raw/final data。
+注意：目前 repo 內事件清單已是 75 筆，但本機 `data/raw/` 和 `data/final/` 裡的正式 crawl 結果，經檢查仍呈現 25-event run 的規模。  
+如果已經重跑過 75 筆事件，請確認輸出檔是否真的覆蓋到以下路徑，或重新執行 crawler。
 
-目前本機已抓到的 25-event run 結果：
+目前本機可確認的輸出狀態：
 
 ```text
+Events master：75 筆
+Crawler keywords：75 筆
 Naver raw：3564 筆
 Google Trends raw：6026 筆
 YouTube raw：125 筆
 Daily traffic：495 筆
 Validation checks：10 筆
 Validation failed checks：0 筆
+```
+
+判讀：
+
+```text
+事件清單已是 75 筆，但 raw/final 輸出看起來仍不是完整 75 筆事件重跑後的規模。
+尤其 Daily traffic 只有 495 筆，仍接近原本 25 筆事件版本。
 ```
 
 目前可用輸出檔：
@@ -51,11 +60,18 @@ data/final/traffic_daily.csv
 data/final/data_quality_report.csv
 ```
 
-這些 raw/final 檔目前被 `.gitignore` 排除，沒有推上 GitHub。Repo 內只保留事件清單、關鍵字、程式與說明文件。
+注意：目前部分 raw/final CSV 已被 Git 追蹤，因此 repo 內可能看得到舊版 crawl 結果。`.gitignore` 只能避免新檔案自動加入，不能自動停止追蹤已加入過的檔案。
+
+建議協作方式：
+
+```text
+小型摘要、事件清單、關鍵字、程式碼：放 GitHub repo
+大型 raw/final CSV：確認後再決定是否提交，或改用壓縮檔／雲端附件交給隊友
+```
 
 ## 三、目前可分析性
 
-目前 25-event run 可以做初步分析：
+目前輸出檔可以做初步分析，但若要支援 75 筆事件的正式分析，應先重新跑 crawler 並確認列數增加。
 
 - Google Trends 可作為每日事件熱度主指標。
 - YouTube 可作為作品或事件規模輔助指標，但它是累積觀看數，不是每日新增流量。
@@ -79,7 +95,7 @@ end_date
 
 ## 四、下一步
 
-因為事件清單已從 25 筆擴充到 75 筆，請重新跑：
+因為事件清單已從 25 筆擴充到 75 筆，請重新跑並確認輸出檔時間有更新：
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\collect_naver.py
@@ -87,6 +103,12 @@ end_date
 .\.venv\Scripts\python.exe scripts\collect_youtube.py
 .\.venv\Scripts\python.exe scripts\build_daily_traffic.py
 .\.venv\Scripts\python.exe scripts\validate_dataset.py
+```
+
+跑完後建議檢查：
+
+```powershell
+.\.venv\Scripts\python.exe -B -c "import pandas as pd, os; files=[('events','data/templates/events_master.csv'),('keywords','config/keywords.csv'),('naver_raw','data/raw/naver_results.csv'),('google_trends_raw','data/raw/google_trends.csv'),('youtube_raw','data/raw/youtube_stats.csv'),('traffic','data/final/traffic_daily.csv'),('validation','data/final/data_quality_report.csv')]; [print(name, len(pd.read_csv(path)) if os.path.exists(path) else 'missing') for name,path in files]"
 ```
 
 如果 YouTube API quota 用完，可以先跳過 YouTube，完成 Naver + Google Trends：
@@ -199,4 +221,3 @@ end_date
 | LESSERAFIM_20240830_CRAZY | comeback | LE SSERAFIM releases Crazy | 2024-08-30 to 2024-09-13 | positive | complete |
 | LESSERAFIM_20240911_MTV_VMAS | achievement | LE SSERAFIM performs at MTV VMAs | 2024-09-11 to 2024-09-18 | positive | complete |
 | LESSERAFIM_20250314_HOT | comeback | LE SSERAFIM releases Hot | 2025-03-14 to 2025-03-28 | positive | complete |
-
