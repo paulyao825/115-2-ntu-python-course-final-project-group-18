@@ -24,7 +24,6 @@ cmd /c .venv\Scripts\activate.bat
 NAVER_CLIENT_ID=
 NAVER_CLIENT_SECRET=
 YOUTUBE_API_KEY=
-GOOGLE_SHEET_ID=
 ```
 
 目前最重要的是：
@@ -32,10 +31,10 @@ GOOGLE_SHEET_ID=
 - `NAVER_CLIENT_ID`
 - `NAVER_CLIENT_SECRET`
 - `YOUTUBE_API_KEY`
+ 
+目前已改用 GitHub repo 和 CSV 協作，不需要 `GOOGLE_SHEET_ID`。
 
-`GOOGLE_SHEET_ID` 可等 Google Sheet 建好後再填。
-
-## 3. 先補人工事件清單
+## 3. 檢查已建立的女團事件清單
 
 先不要直接大量爬。請先在：
 
@@ -43,13 +42,17 @@ GOOGLE_SHEET_ID=
 data/templates/events_master.csv
 ```
 
-補入人工確認過的重要事件。至少先做：
+目前已先整理五個女團各 5 筆事件：
 
 ```text
-每個團體 5 筆事件
+TWICE
+aespa
+BLACKPINK
+NewJeans
+LE SSERAFIM
 ```
 
-每筆事件至少填：
+請檢查每筆事件的：
 
 ```text
 event_id
@@ -85,7 +88,7 @@ status
 config/keywords.csv
 ```
 
-目前裡面的資料是 template，不是最終事件資料。每個實際事件應該有自己的 `event_id` 和查詢字。
+目前裡面的資料已改成事件級關鍵字。每個實際事件都有自己的 `event_id` 和查詢字。
 
 建議每個事件至少有：
 
@@ -119,11 +122,7 @@ python scripts\collect_google_trends.py
 python scripts\collect_youtube.py
 ```
 
-再跑股價：
-
-```powershell
-python scripts\collect_stock.py
-```
+股價資料由其他組員負責，你不需要跑 `collect_stock.py`。
 
 ## 6. 建立每日流量資料
 
@@ -151,19 +150,10 @@ data/final/data_quality_report.csv
 
 如果有 failed checks，先修 `events_master.csv` 或 `keywords.csv`，再重新跑。
 
-## 8. 匯入 Google Sheet
+## 8. 用 GitHub 協作
 
-建議 Google Sheet 分頁對應：
-
-- `Events_Master` 對應 `events_master.csv`
-- `Traffic_Daily` 對應 `traffic_daily.csv`
-- `Sources` 對應 `sources.csv`
-- `Group_Weights` 對應 `group_weights.csv`
-- `Company_Weights` 對應 `company_weights.csv`
-- `Keyword_Dictionary` 對應 `keywords.csv`
-- `Collection_Log` 對應 `collection_log.csv`
-- `Crawler_Run_Log` 對應 `crawler_run_log.csv`
-- `Data_Quality_Check` 對應 `data_quality_report.csv`
+跑完 crawler 後，請檢查 `data/raw/` 與 `data/final/` 的輸出，再視需要提交到 GitHub。
+目前 `.gitignore` 預設不提交 raw/final 輸出，避免把大量或未清理資料直接推上去。
 
 ## 9. 注意事項
 
@@ -172,4 +162,3 @@ data/final/data_quality_report.csv
 - Instagram、Weverse、Bubble 歷史資料通常不完整，只能當 fanbase proxy。
 - 不確定事件請標記 `needs_review`，不要標記 `complete`。
 - 每個事件至少要有一個官方或 Naver 來源。
-

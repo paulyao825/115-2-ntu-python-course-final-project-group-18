@@ -1,13 +1,26 @@
 event_id,company,ticker,group,member,event_category,keyword_ko,keyword_en,keyword_zh,naver_query,google_trends_query,youtube_query,start_date,end_date
-JYP_TWICE_TEMPLATE,JYP,035900.KQ,TWICE,,comeback,트와이스 컴백,TWICE comeback,TWICE 回歸,트와이스 컴백,TWICE comeback,TWICE official,2021-01-01,2026-01-01
-JYP_SKZ_TEMPLATE,JYP,035900.KQ,Stray Kids,,concert,스트레이키즈 콘서트,Stray Kids concert,Stray Kids 演唱會,스트레이키즈 콘서트,Stray Kids concert,Stray Kids official,2021-01-01,2026-01-01
-SM_AESPA_TEMPLATE,SM,041510.KQ,aespa,,comeback,에스파 컴백,aespa comeback,aespa 回歸,에스파 컴백,aespa comeback,aespa official,2021-01-01,2026-01-01
-SM_NCT_TEMPLATE,SM,041510.KQ,NCT,,activity,NCT 활동,NCT activity,NCT 活動,NCT 활동,NCT activity,NCT official,2021-01-01,2026-01-01
-SM_EXO_TEMPLATE,SM,041510.KQ,EXO,,contract_member,엑소 계약,EXO contract,EXO 合約,엑소 계약,EXO contract,EXO official,2021-01-01,2026-01-01
-YG_BLACKPINK_TEMPLATE,YG,122870.KQ,BLACKPINK,,dating,블랙핑크 열애설,BLACKPINK dating rumor,BLACKPINK 戀愛傳聞,블랙핑크 열애설,BLACKPINK dating rumor,BLACKPINK official,2021-01-01,2026-01-01
-YG_BIGBANG_TEMPLATE,YG,122870.KQ,BIGBANG,,comeback,빅뱅 컴백,BIGBANG comeback,BIGBANG 回歸,빅뱅 컴백,BIGBANG comeback,BIGBANG official,2021-01-01,2026-01-01
-HYBE_BTS_TEMPLATE,HYBE,352820.KS,BTS,,military,방탄소년단 군대,BTS military,BTS 入伍,방탄소년단 군대,BTS military,BTS official,2021-01-01,2026-01-01
-HYBE_SVT_TEMPLATE,HYBE,352820.KS,SEVENTEEN,,concert,세븐틴 콘서트,SEVENTEEN concert,SEVENTEEN 演唱會,세븐틴 콘서트,SEVENTEEN concert,SEVENTEEN official,2021-01-01,2026-01-01
-HYBE_NJ_TEMPLATE,HYBE,352820.KS,NewJeans,,legal_dispute,뉴진스 소송,NewJeans legal dispute,NewJeans 法律爭議,뉴진스 소송,NewJeans legal dispute,NewJeans official,2021-01-01,2026-01-01
-HYBE_LSF_TEMPLATE,HYBE,352820.KS,LE SSERAFIM,,PR_crisis,르세라핌 논란,LE SSERAFIM controversy,LE SSERAFIM 爭議,르세라핌 논란,LE SSERAFIM controversy,LE SSERAFIM official,2021-01-01,2026-01-01
-
+TWICE_20210609_ALCOHOL_FREE,JYP,035900.KQ,TWICE,,comeback,트와이스 Alcohol-Free,TWICE Alcohol-Free,TWICE Alcohol-Free,트와이스 Alcohol-Free,TWICE Alcohol-Free,TWICE Alcohol-Free,2021-05-31,2021-06-18
+TWICE_20211001_THE_FEELS,JYP,035900.KQ,TWICE,,comeback,트와이스 The Feels,TWICE The Feels,TWICE The Feels,트와이스 The Feels,TWICE The Feels,TWICE The Feels,2021-10-01,2021-10-11
+TWICE_20220712_CONTRACT_RENEWAL,JYP,035900.KQ,TWICE,,contract_member,트와이스 재계약,TWICE contract renewal,TWICE 續約,트와이스 재계약,TWICE contract renewal,TWICE contract renewal,2022-07-12,2022-07-19
+TWICE_20230221_READY_TO_BE_TOUR,JYP,035900.KQ,TWICE,,concert,트와이스 Ready To Be 월드투어,TWICE Ready To Be world tour,TWICE Ready To Be 世界巡演,트와이스 Ready To Be 월드투어,TWICE Ready To Be tour,TWICE Ready To Be tour,2023-02-21,2023-03-03
+TWICE_20240303_WITH_YOUTH_BB200,JYP,035900.KQ,TWICE,,achievement,트와이스 With YOU-th 빌보드200 1위,TWICE With YOU-th Billboard 200,TWICE With YOU-th Billboard 200,트와이스 With YOU-th 빌보드200 1위,TWICE With YOU-th Billboard 200,TWICE With YOU-th,2024-02-23,2024-03-09
+AESPA_20210517_NEXT_LEVEL,SM,041510.KQ,aespa,,comeback,에스파 Next Level,aespa Next Level,aespa Next Level,에스파 Next Level,aespa Next Level,aespa Next Level,2021-05-06,2021-05-31
+AESPA_20220423_COACHELLA,SM,041510.KQ,aespa,,activity,에스파 코첼라 2022,aespa Coachella 2022,aespa Coachella 2022,에스파 코첼라 2022,aespa Coachella,aespa Coachella,2022-04-19,2022-04-30
+AESPA_20220718_GIRLS_BB200_TOP3,SM,041510.KQ,aespa,,achievement,에스파 Girls 빌보드200,aespa Girls Billboard 200,aespa Girls Billboard 200,에스파 Girls 빌보드200,aespa Girls Billboard 200,aespa Girls,2022-07-08,2022-07-24
+AESPA_20240227_KARINA_DATING_BREAKUP,SM,041510.KQ,aespa,Karina,dating,카리나 이재욱 열애 결별,Karina Lee Jae-wook dating breakup,Karina 李宰旭 戀愛 分手,카리나 이재욱 열애 결별,Karina Lee Jae-wook,aespa Karina Lee Jae-wook,2024-02-27,2024-04-02
+AESPA_20240527_ARMAGEDDON,SM,041510.KQ,aespa,,comeback,에스파 Armageddon 정규앨범,aespa Armageddon album,aespa Armageddon 專輯,에스파 Armageddon 정규앨범,aespa Armageddon,aespa Armageddon,2024-04-22,2024-06-02
+BLACKPINK_20220819_PINK_VENOM,YG,122870.KQ,BLACKPINK,,comeback,블랙핑크 Pink Venom,BLACKPINK Pink Venom,BLACKPINK Pink Venom,블랙핑크 Pink Venom,BLACKPINK Pink Venom,BLACKPINK Pink Venom,2022-08-19,2022-08-26
+BLACKPINK_20220916_BORN_PINK,YG,122870.KQ,BLACKPINK,,comeback,블랙핑크 Born Pink,BLACKPINK Born Pink,BLACKPINK Born Pink,블랙핑크 Born Pink,BLACKPINK Born Pink,BLACKPINK Born Pink,2022-09-16,2022-09-25
+BLACKPINK_20230110_COACHELLA_HEADLINER,YG,122870.KQ,BLACKPINK,,achievement,블랙핑크 코첼라 헤드라이너,BLACKPINK Coachella headliner,BLACKPINK Coachella Headliner,블랙핑크 코첼라 헤드라이너,BLACKPINK Coachella,BLACKPINK Coachella,2023-01-10,2023-04-22
+BLACKPINK_20231206_GROUP_CONTRACT_RENEWAL,YG,122870.KQ,BLACKPINK,,contract_member,블랙핑크 재계약,BLACKPINK contract renewal,BLACKPINK 續約,블랙핑크 재계약,BLACKPINK contract renewal,BLACKPINK contract renewal,2023-12-06,2023-12-13
+BLACKPINK_20231229_INDIVIDUAL_CONTRACTS,YG,122870.KQ,BLACKPINK,,contract_member,블랙핑크 개인 계약 YG,BLACKPINK individual contracts YG,BLACKPINK 個人合約 YG,블랙핑크 개인 계약 YG,BLACKPINK individual contracts,BLACKPINK individual contracts,2023-12-29,2024-01-05
+NEWJEANS_20220722_ATTENTION_DEBUT,HYBE,352820.KS,NewJeans,,comeback,뉴진스 Attention 데뷔,NewJeans Attention debut,NewJeans Attention 出道,뉴진스 Attention 데뷔,NewJeans Attention,NewJeans Attention,2022-07-22,2022-08-01
+NEWJEANS_20221219_DITTO,HYBE,352820.KS,NewJeans,,comeback,뉴진스 Ditto,NewJeans Ditto,NewJeans Ditto,뉴진스 Ditto,NewJeans Ditto,NewJeans Ditto,2022-12-19,2023-01-13
+NEWJEANS_20230803_GET_UP_BB200_NO1,HYBE,352820.KS,NewJeans,,achievement,뉴진스 Get Up 빌보드200 1위,NewJeans Get Up Billboard 200,NewJeans Get Up Billboard 200,뉴진스 Get Up 빌보드200 1위,NewJeans Get Up Billboard 200,NewJeans Get Up,2023-07-21,2023-08-05
+NEWJEANS_20240422_HYBE_ADOR_DISPUTE,HYBE,352820.KS,NewJeans,,legal_dispute,하이브 어도어 뉴진스 분쟁,HYBE ADOR NewJeans dispute,HYBE ADOR NewJeans 爭議,하이브 어도어 뉴진스 분쟁,HYBE ADOR NewJeans,HYBE ADOR NewJeans,2024-04-22,2024-05-31
+NEWJEANS_20241128_CONTRACT_TERMINATION,HYBE,352820.KS,NewJeans,,contract_member,뉴진스 어도어 전속계약 해지,NewJeans ADOR contract termination,NewJeans ADOR 終止合約,뉴진스 어도어 전속계약 해지,NewJeans contract termination,NewJeans contract termination,2024-11-28,2024-12-05
+LESSERAFIM_20220502_FEARLESS_DEBUT,HYBE,352820.KS,LE SSERAFIM,,comeback,르세라핌 Fearless 데뷔,LE SSERAFIM Fearless debut,LE SSERAFIM Fearless 出道,르세라핌 Fearless 데뷔,LE SSERAFIM Fearless,LE SSERAFIM Fearless,2022-05-02,2022-05-09
+LESSERAFIM_20220720_GARAM_TERMINATION,HYBE,352820.KS,LE SSERAFIM,Kim Garam,PR_crisis,김가람 르세라핌 계약해지,Kim Garam LE SSERAFIM contract terminated,金佳覽 LE SSERAFIM 解約,김가람 르세라핌 계약해지,Kim Garam LE SSERAFIM,Kim Garam LE SSERAFIM,2022-07-20,2022-07-27
+LESSERAFIM_20221017_ANTIFRAGILE,HYBE,352820.KS,LE SSERAFIM,,comeback,르세라핌 Antifragile,LE SSERAFIM Antifragile,LE SSERAFIM Antifragile,르세라핌 Antifragile,LE SSERAFIM Antifragile,LE SSERAFIM Antifragile,2022-10-17,2022-10-31
+LESSERAFIM_20240305_EASY_HOT100,HYBE,352820.KS,LE SSERAFIM,,achievement,르세라핌 Easy 빌보드 Hot 100,LE SSERAFIM Easy Hot 100,LE SSERAFIM Easy Hot 100,르세라핌 Easy 빌보드 Hot 100,LE SSERAFIM Easy Hot 100,LE SSERAFIM Easy,2024-02-19,2024-03-09
+LESSERAFIM_20240413_COACHELLA_CRITICISM,HYBE,352820.KS,LE SSERAFIM,,PR_crisis,르세라핌 코첼라 라이브 논란,LE SSERAFIM Coachella live criticism,LE SSERAFIM Coachella 唱功爭議,르세라핌 코첼라 라이브 논란,LE SSERAFIM Coachella criticism,LE SSERAFIM Coachella,2024-04-13,2024-04-20

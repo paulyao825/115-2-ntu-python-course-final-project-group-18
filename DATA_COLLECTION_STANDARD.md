@@ -8,7 +8,7 @@
 偶像事件 -> 社群／新聞熱度變化 -> 娛樂公司股價波動
 ```
 
-資料集會以 Google Sheet 作為組員協作格式，並以 CSV 作為 Python 分析格式。
+資料集會以 CSV 作為 Python 分析格式，並以 GitHub 作為組員協作與版本管理方式。
 
 ## 二、研究範圍
 
@@ -26,10 +26,10 @@
 
 | 公司 | 團體 |
 |---|---|
-| JYP | TWICE, Stray Kids |
-| SM | aespa, NCT, EXO |
-| YG | BLACKPINK, BIGBANG |
-| HYBE | BTS, SEVENTEEN, NewJeans, LE SSERAFIM |
+| JYP | TWICE |
+| SM | aespa |
+| YG | BLACKPINK |
+| HYBE | NewJeans, LE SSERAFIM |
 
 建議股票代號：
 
@@ -74,16 +74,16 @@ market_confounder
 3. 在 Google Trends、Naver DataLab、YouTube 或新聞量上有明顯熱度。
 4. 事件可合理對應到公司股價分析時間點。
 
-每個團體建議收錄：
+本階段只負責女團事件資料。每個團體收錄：
 
 ```text
-5 至 10 筆高影響事件
+5 筆高影響事件
 ```
 
 總資料量目標：
 
 ```text
-60 至 100 筆事件
+25 筆事件
 ```
 
 每家公司至少要有：
@@ -137,15 +137,9 @@ end_date - start_date + 1
 needs_review
 ```
 
-## 七、Google Sheet 標準
+## 七、CSV 資料表標準
 
-Google Sheet 名稱建議：
-
-```text
-Kpop_Event_Data_Collection_第18組
-```
-
-需要建立以下工作表：
+需要維護以下 CSV：
 
 1. `Events_Master`
 2. `Traffic_Daily`
@@ -156,6 +150,15 @@ Kpop_Event_Data_Collection_第18組
 7. `Collection_Log`
 8. `Crawler_Run_Log`
 9. `Data_Quality_Check`
+
+目前主要檔案路徑：
+
+```text
+data/templates/events_master.csv
+config/keywords.csv
+data/final/traffic_daily.csv
+data/final/data_quality_report.csv
+```
 
 ### Events_Master
 
@@ -229,7 +232,7 @@ Python crawler 的目的不是完全自動判斷所有事件，而是協助收�
 Crawler 應完成：
 
 1. 讀取 `config/keywords.csv`
-2. 根據每筆事件關鍵字查詢 Naver、Google Trends、YouTube、股價
+2. 根據每筆事件關鍵字查詢 Naver、Google Trends、YouTube
 3. 輸出乾淨 CSV
 4. 記錄 crawler 執行狀態
 5. 讓資料可以重新執行與驗證
@@ -241,9 +244,10 @@ Crawler 應完成：
 | `collect_naver.py` | 使用 Naver Search API 收集新聞／部落格資料 |
 | `collect_google_trends.py` | 使用 PyTrends 收集 Google Trends 相對熱度 |
 | `collect_youtube.py` | 使用 YouTube Data API 收集影片觀看、留言、按讚數 |
-| `collect_stock.py` | 使用 yfinance 收集公司每日股價 |
 | `build_daily_traffic.py` | 將事件窗展開成每日資料表 |
 | `validate_dataset.py` | 檢查資料品質與欄位完整性 |
+
+`collect_stock.py` 保留給負責股價的組員使用，本階段不執行。
 
 API key 不可寫死在程式碼裡，必須放在 `.env`：
 
@@ -251,7 +255,6 @@ API key 不可寫死在程式碼裡，必須放在 `.env`：
 NAVER_CLIENT_ID=
 NAVER_CLIENT_SECRET=
 YOUTUBE_API_KEY=
-GOOGLE_SHEET_ID=
 ```
 
 ## 九、資料品質標準
@@ -266,7 +269,7 @@ GOOGLE_SHEET_ID=
 - Google Trends 與 Naver DataLab 是相對熱度，不是實際搜尋人數。
 - Instagram、Weverse、Bubble 歷史資料不完整，因此只作為 fanbase proxy。
 - Python crawler 會輸出 log，流程可重跑、可檢查。
-- 最終整理成 Google Sheet，方便組員共同檢查與補資料。
+- 最終整理成 CSV 並提交 GitHub，方便組員共同檢查與補資料。
 
 ## 十、驗收標準
 
@@ -280,5 +283,4 @@ GOOGLE_SHEET_ID=
 - 所有日期格式為 `YYYY-MM-DD`。
 - `validate_dataset.py` 沒有輸出重大錯誤。
 - 隨機抽查 10 筆事件，確認來源與日期合理。
-- Google Sheet 可下載成 CSV，並能用 pandas 正常讀取。
-
+- CSV 能用 pandas 正常讀取。
