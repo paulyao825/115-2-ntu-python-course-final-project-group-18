@@ -27,18 +27,17 @@ aespa          15
 
 ## 二、目前已抓取資料狀態
 
-注意：目前 repo 內事件清單已是 75 筆，但本機 `data/raw/` 和 `data/final/` 裡的正式 crawl 結果，經檢查仍呈現 25-event run 的規模。  
-如果已經重跑過 75 筆事件，請確認輸出檔是否真的覆蓋到以下路徑，或重新執行 crawler。
+目前本機已重跑 75-event run，`traffic_daily.csv` 已包含 75 個 event_id。
 
 目前本機可確認的輸出狀態：
 
 ```text
 Events master：75 筆
 Crawler keywords：75 筆
-Naver raw：3564 筆
+Naver raw：10654 筆
 Google Trends raw：6026 筆
 YouTube raw：125 筆
-Daily traffic：495 筆
+Daily traffic：1185 筆
 Validation checks：10 筆
 Validation failed checks：0 筆
 ```
@@ -46,8 +45,10 @@ Validation failed checks：0 筆
 判讀：
 
 ```text
-事件清單已是 75 筆，但 raw/final 輸出看起來仍不是完整 75 筆事件重跑後的規模。
-尤其 Daily traffic 只有 495 筆，仍接近原本 25 筆事件版本。
+Naver 與 daily traffic 已反映 75 筆事件重跑後的規模。
+Google Trends raw 仍是 6026 筆，因為 PyTrends 依週/月頻率回傳，列數不會跟事件數線性成長。
+YouTube raw 仍是 125 筆，代表目前 YouTube 正式輸出仍接近 25-event run；若要完整 75-event YouTube 資料，需要等 YouTube API quota 重置後重跑 collect_youtube.py。
+traffic_daily.csv 已有 75 個 event_id，其中 515 列 data_quality=ok，670 列 data_quality=missing_traffic。
 ```
 
 目前可用輸出檔：
@@ -71,12 +72,13 @@ data/final/data_quality_report.csv
 
 ## 三、目前可分析性
 
-目前輸出檔可以做初步分析，但若要支援 75 筆事件的正式分析，應先重新跑 crawler 並確認列數增加。
+目前輸出檔已可支援 75 筆事件的初步分析，但 YouTube 欄位尚未完整覆蓋 75-event run。
 
 - Google Trends 可作為每日事件熱度主指標。
 - YouTube 可作為作品或事件規模輔助指標，但它是累積觀看數，不是每日新增流量。
 - Naver raw 可作為新聞來源與媒體覆蓋佐證，但 Naver Search API 回傳不等於完整歷史每日新聞量。
 - `traffic_total_raw` 不建議直接作為最終分析主欄位，因為 YouTube 累積觀看數會壓過其他欄位。
+- `data_quality=missing_traffic` 的列不應直接用於強結論，可在分析時過濾或另外標記。
 
 建議正式分析欄位：
 
@@ -95,11 +97,9 @@ end_date
 
 ## 四、下一步
 
-因為事件清單已從 25 筆擴充到 75 筆，請重新跑並確認輸出檔時間有更新：
+目前 Naver、Google Trends、daily traffic、validation 已可用。若要補完整 YouTube，請等 YouTube quota 重置後跑：
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\collect_naver.py
-.\.venv\Scripts\python.exe scripts\collect_google_trends.py
 .\.venv\Scripts\python.exe scripts\collect_youtube.py
 .\.venv\Scripts\python.exe scripts\build_daily_traffic.py
 .\.venv\Scripts\python.exe scripts\validate_dataset.py
@@ -111,11 +111,12 @@ end_date
 .\.venv\Scripts\python.exe -B -c "import pandas as pd, os; files=[('events','data/templates/events_master.csv'),('keywords','config/keywords.csv'),('naver_raw','data/raw/naver_results.csv'),('google_trends_raw','data/raw/google_trends.csv'),('youtube_raw','data/raw/youtube_stats.csv'),('traffic','data/final/traffic_daily.csv'),('validation','data/final/data_quality_report.csv')]; [print(name, len(pd.read_csv(path)) if os.path.exists(path) else 'missing') for name,path in files]"
 ```
 
-如果 YouTube API quota 用完，可以先跳過 YouTube，完成 Naver + Google Trends：
+若要重新完整抓取全部資料，可跑：
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\collect_naver.py
 .\.venv\Scripts\python.exe scripts\collect_google_trends.py
+.\.venv\Scripts\python.exe scripts\collect_youtube.py
 .\.venv\Scripts\python.exe scripts\build_daily_traffic.py
 .\.venv\Scripts\python.exe scripts\validate_dataset.py
 ```
