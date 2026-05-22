@@ -6,8 +6,9 @@ from datetime import datetime
 from email.utils import parsedate_to_datetime
 
 import requests
+from requests import HTTPError
 
-from common import END_DATE, PROJECT_ROOT, RAW_DIR, START_DATE, ensure_dirs, env_required, load_env, read_csv, write_csv
+from common import END_DATE, PROJECT_ROOT, RAW_DIR, START_DATE, ensure_dirs, env_required, load_env, read_csv, requests_verify, write_csv
 
 
 FIELDNAMES = [
@@ -48,8 +49,17 @@ def naver_search(query: str, search_type: str, client_id: str, client_secret: st
         "X-Naver-Client-Secret": client_secret,
     }
     params = {"query": query, "display": display, "sort": "date"}
-    response = requests.get(url, headers=headers, params=params, timeout=20)
-    response.raise_for_status()
+    response = requests.get(url, headers=headers, params=params, timeout=20, verify=requests_verify())
+    try:
+        response.raise_for_status()
+    except HTTPError as exc:
+        if response.status_code == 401:
+            raise RuntimeError(
+                "Naver API returned 401 Unauthorized. Check that NAVER_CLIENT_ID and "
+                "NAVER_CLIENT_SECRET are copied from the same Naver Developers app, "
+                "and that the app has Search API permission enabled."
+            ) from exc
+        raise
     return response.json().get("items", [])
 
 

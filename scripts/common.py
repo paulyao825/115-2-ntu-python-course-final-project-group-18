@@ -6,7 +6,9 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Iterable
 
+import certifi
 from dotenv import load_dotenv
+import urllib3
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +23,8 @@ END_DATE = date(2026, 1, 1)
 
 def load_env() -> None:
     load_dotenv(PROJECT_ROOT / ".env")
+    if ssl_verify_disabled():
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def ensure_dirs() -> None:
@@ -58,3 +62,17 @@ def env_required(name: str) -> str:
         raise RuntimeError(f"Missing required environment variable: {name}")
     return value
 
+
+def ssl_verify_disabled() -> bool:
+    value = os.getenv("CRAWLER_INSECURE_SSL_VERIFY", "false").strip().lower()
+    return value in {"1", "true", "yes"}
+
+
+def requests_verify():
+    return False if ssl_verify_disabled() else certifi.where()
+
+
+def httplib2_options() -> dict:
+    if ssl_verify_disabled():
+        return {"disable_ssl_certificate_validation": True}
+    return {"ca_certs": certifi.where()}

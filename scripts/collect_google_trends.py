@@ -4,7 +4,7 @@ import argparse
 
 from pytrends.request import TrendReq
 
-from common import PROJECT_ROOT, RAW_DIR, START_DATE, END_DATE, ensure_dirs, read_csv, write_csv
+from common import PROJECT_ROOT, RAW_DIR, START_DATE, END_DATE, ensure_dirs, load_env, read_csv, requests_verify, write_csv
 
 
 FIELDNAMES = ["event_id", "date", "query", "google_trends_score"]
@@ -24,8 +24,9 @@ def main() -> None:
     parser.add_argument("--geo", default="")
     args = parser.parse_args()
 
+    load_env()
     ensure_dirs()
-    pytrends = TrendReq(hl="en-US", tz=480)
+    pytrends = TrendReq(hl="en-US", tz=480, requests_args={"verify": requests_verify()})
     timeframe = f"{START_DATE.isoformat()} {END_DATE.isoformat()}"
     rows = []
 

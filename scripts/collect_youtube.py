@@ -3,9 +3,10 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 
+import httplib2
 from googleapiclient.discovery import build
 
-from common import PROJECT_ROOT, RAW_DIR, ensure_dirs, env_required, load_env, read_csv, write_csv
+from common import PROJECT_ROOT, RAW_DIR, ensure_dirs, env_required, httplib2_options, load_env, read_csv, write_csv
 
 
 FIELDNAMES = [
@@ -40,7 +41,7 @@ def main() -> None:
     load_env()
     ensure_dirs()
     api_key = env_required("YOUTUBE_API_KEY")
-    youtube = build("youtube", "v3", developerKey=api_key)
+    youtube = build("youtube", "v3", developerKey=api_key, http=httplib2.Http(**httplib2_options()))
     collected_at = datetime.now().isoformat(timespec="seconds")
     rows = []
 
