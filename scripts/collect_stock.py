@@ -1,14 +1,23 @@
-from __future__ import annotations
+"""
+Collect daily stock price data for K-pop entertainment companies.
 
-import argparse
-from datetime import timedelta
+This script downloads daily OHLCV stock data for JYP, SM, YG, and HYBE
+from Yahoo Finance and saves the cleaned output to:
 
+    data/final/stock_daily.csv
+
+Output columns:
+    date, company, ticker, open, high, low, close, adj_close, volume, daily_return
+"""
+
+from pathlib import Path
+
+import pandas as pd
 import yfinance as yf
 
-from common import FINAL_DIR, PROJECT_ROOT, START_DATE, END_DATE, ensure_dirs, write_csv
 
-
-FIELDNAMES = ["company", "ticker", "date", "open", "high", "low", "close", "adj_close", "volume"]
+START_DATE = "2020-12-25"
+END_DATE = "2026-01-16"
 
 TICKERS = {
     "JYP": "035900.KQ",
@@ -18,43 +27,108 @@ TICKERS = {
 }
 
 
-def resolve_path(value: str):
-    from pathlib import Path
+def download_stock_data(company: str, ticker: str) -> pd.DataFrame:
+    """Download and clean daily stock data for one company."""
+    print(f"Downloading {company} ({ticker})...")
 
-    path = Path(value)
-    return path if path.is_absolute() else PROJECT_ROOT / path
+    df = yf.download(
+        ticker,
+        start=START_DATE,
+        end=END_DATE,
+        progress=False,
+        auto_adjust=False,
+    )
+
+    if df.empty:
+        raise ValueError(f"No stock data downloaded for {company} ({ticker}).")
+
+    df = df.reset_index()
+
+    # yfinance may return multi-index columns in some versions.
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
+
+    df["company"] = company
+    df["ticker"] = ticker
+
+    df = df.rename(
+        columns={
+            "Date": "date",
+            "Open": "open",
+            "High": "high",
+            "Low": "low",
+            "Close": "close",
+            "Adj Close": "adj_close",
+            "Volume": "volume",
+        }
+    )
+
+    df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+    df["daily_return"] = df["adj_close"].pct_change()
+
+    return df[
+        [
+            "date",
+            "company",
+            "ticker",
+            "open",
+            "high",
+            "low",
+            "close",
+            "adj_close",
+            "volume",
+            "daily_return",
+        ]
+    ]
+
+
+def validate_stock_data(stock_daily: pd.DataFrame) -> None:
+    """Print basic validation results for the collected stock data."""
+    print("\nValidation summary")
+    print("-" * 40)
+
+    print("Rows:", len(stock_daily))
+    print("Columns:", list(stock_daily.columns))
+    print("Date range:", stock_daily["date"].min(), "to", stock_daily["date"].max())
+
+    print("\nRows by company:")
+    print(stock_daily.groupby(["company", "ticker"]).size())
+
+    print("\nMissing values:")
+    print(stock_daily.isna().sum())
+
+    duplicate_count = stock_daily.duplicated(["date", "ticker"]).sum()
+    print("\nDuplicated date + ticker rows:", duplicate_count)
+
+    if duplicate_count > 0:
+        raise ValueError("Duplicated date + ticker rows found.")
+
+    expected_tickers = set(TICKERS.values())
+    actual_tickers = set(stock_daily["ticker"].unique())
+
+    if expected_tickers != actual_tickers:
+        raise ValueError(
+            f"Ticker mismatch. Expected {expected_tickers}, got {actual_tickers}."
+        )
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Collect daily stock prices from Yahoo Finance.")
-    parser.add_argument("--output", default=str(FINAL_DIR / "stock_daily.csv"))
-    args = parser.parse_args()
+    """Download all stock data and save the final CSV."""
+    output_path = Path("data/final/stock_daily.csv")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    ensure_dirs()
-    rows = []
+    all_data = []
+
     for company, ticker in TICKERS.items():
-        # yfinance treats end as exclusive, so add one day to include 2026-01-01.
-        end_exclusive = (END_DATE + timedelta(days=1)).isoformat()
-        df = yf.download(ticker, start=START_DATE.isoformat(), end=end_exclusive, progress=False)
-        if df.empty:
-            continue
-        for idx, record in df.iterrows():
-            rows.append(
-                {
-                    "company": company,
-                    "ticker": ticker,
-                    "date": idx.date().isoformat(),
-                    "open": float(record.get("Open", 0)),
-                    "high": float(record.get("High", 0)),
-                    "low": float(record.get("Low", 0)),
-                    "close": float(record.get("Close", 0)),
-                    "adj_close": float(record.get("Adj Close", record.get("Close", 0))),
-                    "volume": int(record.get("Volume", 0)),
-                }
-            )
+        company_data = download_stock_data(company, ticker)
+        all_data.append(company_data)
 
-    write_csv(resolve_path(args.output), rows, FIELDNAMES)
-    print(f"Wrote {len(rows)} rows to {args.output}")
+    stock_daily = pd.concat(all_data, ignore_index=True)
+
+    validate_stock_data(stock_daily)
+
+    stock_daily.to_csv(output_path, index=False, encoding="utf-8-sig")
+    print(f"\nSaved stock data to {output_path}")
 
 
 if __name__ == "__main__":
