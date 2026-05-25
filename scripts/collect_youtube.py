@@ -7,6 +7,7 @@ import httplib2
 from googleapiclient.discovery import build
 
 from common import PROJECT_ROOT, RAW_DIR, ensure_dirs, env_required, httplib2_options, load_env, read_csv, write_csv
+import time
 
 
 FIELDNAMES = [
@@ -59,6 +60,7 @@ def main() -> None:
             publishedAfter="2021-01-01T00:00:00Z",
             publishedBefore="2026-01-02T00:00:00Z",
         ).execute()
+        time.sleep(20)
         video_ids = [entry["id"]["videoId"] for entry in search_response.get("items", [])]
         if not video_ids:
             continue
