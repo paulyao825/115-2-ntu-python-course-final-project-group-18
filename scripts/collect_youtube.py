@@ -25,6 +25,16 @@ FIELDNAMES = [
 ]
 
 
+BOY_GROUPS = {
+    "BTS",
+    "SEVENTEEN",
+    "Stray Kids",
+    "NCT",
+    "EXO",
+    "BIGBANG",
+}
+
+
 def resolve_path(value: str):
     from pathlib import Path
 
@@ -47,6 +57,9 @@ def main() -> None:
     rows = []
 
     for item in read_csv(resolve_path(args.keywords)):
+        if item.get("group") not in BOY_GROUPS:
+            continue
+
         query = item.get("youtube_query") or item.get("keyword_en")
         if not query:
             continue
