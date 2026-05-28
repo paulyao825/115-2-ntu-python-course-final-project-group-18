@@ -1,11 +1,11 @@
 ﻿check_name,status,details,checked_at
-events_not_empty,pass,event_rows=165,2026-05-28T23:01:20
-event_id_unique,pass,event_id must be unique,2026-05-28T23:01:20
-required_fields_present,pass,missing_or_blank=[],2026-05-28T23:01:20
-date_parse_ok,pass,dates must parse,2026-05-28T23:01:20
-end_after_start,pass,end_date must be >= start_date,2026-05-28T23:01:20
-date_in_scope,pass,scope=2021-01-01 to 2026-01-01,2026-05-28T23:01:20
-valid_event_categories,pass,bad_categories=[],2026-05-28T23:01:20
-has_primary_source_url,pass,each event needs official or Naver source,2026-05-28T23:01:20
-traffic_file_readable,pass,traffic_rows=2470,2026-05-28T23:01:20
-all_events_have_traffic_rows,pass,missing=[],2026-05-28T23:01:20
+events_not_empty,pass,event_rows=165,2026-05-28T15:13:51
+event_id_unique,pass,event_id must be unique,2026-05-28T15:13:51
+required_fields_present,pass,missing_or_blank=[],2026-05-28T15:13:51
+date_parse_ok,pass,dates must parse,2026-05-28T15:13:51
+end_after_start,pass,end_date must be >= start_date,2026-05-28T15:13:51
+date_in_scope,pass,scope=2021-01-01 to 2026-01-01,2026-05-28T15:13:51
+valid_event_categories,pass,bad_categories=[],2026-05-28T15:13:51
+has_primary_source_url,pass,each event needs official or Naver source,2026-05-28T15:13:51
+traffic_file_readable,pass,traffic_rows=2470,2026-05-28T15:13:51
+all_events_have_traffic_rows,pass,missing=[],2026-05-28T15:13:51

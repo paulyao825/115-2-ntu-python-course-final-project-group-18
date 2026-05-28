@@ -70,6 +70,7 @@ def naver_search(
     client_id: str,
     client_secret: str,
     display: int,
+    start: int = 1,
 ) -> list[dict]:
     url = f"https://openapi.naver.com/v1/search/{search_type}.json"
     headers = {
@@ -79,6 +80,7 @@ def naver_search(
     params = {
         "query": query,
         "display": display,
+        "start": start,
         "sort": "date",
     }
 
@@ -126,6 +128,12 @@ def main() -> None:
     )
     parser.add_argument("--display", type=int, default=100)
     parser.add_argument("--sleep", type=float, default=0.2)
+    parser.add_argument(
+        "--max-start",
+        type=int,
+        default=1000,
+        help="Highest start offset to paginate to. Naver caps start+display-1 at 1000.",
+    )
     args = parser.parse_args()
 
     load_env()
@@ -152,49 +160,65 @@ def main() -> None:
             ("news", "Naver News"),
             ("blog", "Naver Blog"),
         ]:
-            results = naver_search(
-                query=query,
-                search_type=search_type,
-                client_id=client_id,
-                client_secret=client_secret,
-                display=args.display,
-            )
+            seen_urls: set[str] = set()
+            for start in range(1, args.max_start + 1, args.display):
+                if start + args.display - 1 > 1000:
+                    break
 
-            for result in results:
-                if search_type == "blog":
-                    published_date = parse_blog_postdate(
-                        result.get("postdate", "")
-                    )
-                else:
-                    published_date = parse_pubdate(
-                        result.get("pubDate", "")
-                    )
-
-                if published_date and not (
-                    START_DATE.isoformat()
-                    <= published_date
-                    <= END_DATE.isoformat()
-                ):
-                    continue
-
-                rows.append(
-                    {
-                        "event_id": event_id,
-                        "query": query,
-                        "source_type": search_type,
-                        "platform": platform,
-                        "title": clean_html(result.get("title", "")),
-                        "url": result.get("originallink")
-                        or result.get("link", ""),
-                        "published_date": published_date,
-                        "description": clean_html(
-                            result.get("description", "")
-                        ),
-                        "collected_at": collected_at,
-                    }
+                results = naver_search(
+                    query=query,
+                    search_type=search_type,
+                    client_id=client_id,
+                    client_secret=client_secret,
+                    display=args.display,
+                    start=start,
                 )
 
-            time.sleep(args.sleep)
+                if not results:
+                    break
+
+                for result in results:
+                    if search_type == "blog":
+                        published_date = parse_blog_postdate(
+                            result.get("postdate", "")
+                        )
+                    else:
+                        published_date = parse_pubdate(
+                            result.get("pubDate", "")
+                        )
+
+                    if published_date and not (
+                        START_DATE.isoformat()
+                        <= published_date
+                        <= END_DATE.isoformat()
+                    ):
+                        continue
+
+                    url_key = result.get("originallink") or result.get("link", "")
+                    if url_key and url_key in seen_urls:
+                        continue
+                    seen_urls.add(url_key)
+
+                    rows.append(
+                        {
+                            "event_id": event_id,
+                            "query": query,
+                            "source_type": search_type,
+                            "platform": platform,
+                            "title": clean_html(result.get("title", "")),
+                            "url": url_key,
+                            "published_date": published_date,
+                            "description": clean_html(
+                                result.get("description", "")
+                            ),
+                            "collected_at": collected_at,
+                        }
+                    )
+
+                time.sleep(args.sleep)
+
+                if len(results) < args.display:
+                    break
 
     write_csv(resolve_path(args.output), rows, FIELDNAMES)
     print(f"Wrote {len(rows)} rows to {args.output}")
