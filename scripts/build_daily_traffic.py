@@ -77,9 +77,24 @@ def main() -> None:
         daily = daily.merge(dl_daily, on=["event_id", "date"], how="left")
 
     trends = read_optional_csv(Path(args.trends))
-    if not trends.empty:
-        trend_daily = trends.groupby(["event_id", "date"], as_index=False)["google_trends_score"].max()
-        daily = daily.merge(trend_daily, on=["event_id", "date"], how="left")
+    if not trends.empty and {"event_id", "date", "google_trends_score"}.issubset(trends.columns):
+        trend_daily = (
+            trends.groupby(["event_id", "date"], as_index=False)["google_trends_score"].max()
+        )
+        trend_daily["date"] = pd.to_datetime(trend_daily["date"])
+        panel = daily.copy()
+        panel["date"] = pd.to_datetime(panel["date"])
+        panel = panel.sort_values("date").reset_index(drop=True)
+        trend_daily = trend_daily.sort_values("date").reset_index(drop=True)
+        daily = pd.merge_asof(
+            panel,
+            trend_daily,
+            by="event_id",
+            on="date",
+            direction="backward",
+            tolerance=pd.Timedelta(days=10),
+        )
+        daily["date"] = daily["date"].dt.strftime("%Y-%m-%d")
 
     youtube = read_optional_csv(Path(args.youtube))
     if not youtube.empty:
