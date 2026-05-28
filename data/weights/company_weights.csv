@@ -1,0 +1,5 @@
+﻿company,ticker,market_cap,revenue,company_scale_weight,source_date,source_url,notes
+HYBE,352820.KS,9683290030080,2649870303232,1.7198418697902833,2026-05-28,Yahoo Finance via yfinance,market_cap is used as company size proxy
+JYP,035900.KQ,1898524311552,821854666752,-0.4688088931621585,2026-05-28,Yahoo Finance via yfinance,market_cap is used as company size proxy
+SM,041510.KQ,1843022528512,1174934781952,-0.48441296195341377,2026-05-28,Yahoo Finance via yfinance,market_cap is used as company size proxy
+YG,122870.KQ,839246217216,545404256256,-0.766620014674711,2026-05-28,Yahoo Finance via yfinance,market_cap is used as company size proxy
