@@ -1,0 +1,125 @@
+file,column,description,notes
+data/templates/events_master.csv,event_id,事件唯一 ID,join key
+data/templates/events_master.csv,company,經紀公司 HYBE/SM/JYP/YG,
+data/templates/events_master.csv,ticker,股票代號,
+data/templates/events_master.csv,group,團體名（11 個）,
+data/templates/events_master.csv,member,點名成員,個人事件才填
+data/templates/events_master.csv,event_category,事件大類 comeback/concert/PR_crisis/contract_member/activity/dating,回歸用 dummies
+data/templates/events_master.csv,event_subtype,事件細分類,參考用
+data/templates/events_master.csv,event_title_en,英文事件標題,
+data/templates/events_master.csv,event_title_zh,中文事件標題,
+data/templates/events_master.csv,event_title_ko,韓文事件標題,
+data/templates/events_master.csv,start_date,事件起始日,
+data/templates/events_master.csv,peak_date,事件高峰日,
+data/templates/events_master.csv,end_date,事件結束日,
+data/templates/events_master.csv,duration_days,持續天數,
+data/templates/events_master.csv,event_window_before_days,事件前觀察天數,metadata 目前未使用
+data/templates/events_master.csv,event_window_after_days,事件後觀察天數,metadata
+data/templates/events_master.csv,sentiment_expected,預期情緒 positive/negative/mixed,⚠️ 主觀標註 不要用於分析
+data/templates/events_master.csv,severity_score,嚴重度 1-5,⚠️ 主觀標註 不要用於分析
+data/templates/events_master.csv,source_level,資料來源等級 A_official/B_korean_news/B_media,
+data/templates/events_master.csv,official_source_url,官方來源連結,文件追蹤
+data/templates/events_master.csv,naver_source_url,Naver 來源連結,文件追蹤
+data/templates/events_master.csv,notes,備註,
+data/templates/events_master.csv,collector,紀錄者,
+data/templates/events_master.csv,status,狀態,
+data/final/traffic_daily.csv,event_id,事件 ID,join key
+data/final/traffic_daily.csv,date,日期 YYYY-MM-DD,join key
+data/final/traffic_daily.csv,naver_news_count,當日 Naver 新聞數,daily 訊號
+data/final/traffic_daily.csv,naver_blog_count,當日 Naver Blog 貼文數,daily 訊號
+data/final/traffic_daily.csv,naver_datalab_score,當日 Naver 搜尋指數 0-100,daily 訊號 事件內相對
+data/final/traffic_daily.csv,google_trends_score,當日 Google Trends 指數 0-100,daily 訊號
+data/final/traffic_daily.csv,youtube_views,影片累計觀看數,⚠️ 全 0 未抓
+data/final/traffic_daily.csv,youtube_comments,影片累計留言數,⚠️ 全 0 未抓
+data/final/traffic_daily.csv,youtube_likes,影片累計按讚數,⚠️ 全 0 未抓
+data/final/traffic_daily.csv,instagram_followers,該團當下 IG 追蹤數,group-level 常數
+data/final/traffic_daily.csv,traffic_total_raw,4 個 daily 訊號加總,X 主變數
+data/final/traffic_daily.csv,traffic_total_normalized,標準化 traffic_total_raw,
+data/final/traffic_daily.csv,data_quality,ok 或 missing_traffic,
+data/final/stock_daily.csv,date,交易日,join key
+data/final/stock_daily.csv,company,HYBE/SM/JYP/YG,join key
+data/final/stock_daily.csv,ticker,股票代號,
+data/final/stock_daily.csv,open,開盤價,
+data/final/stock_daily.csv,high,最高價,
+data/final/stock_daily.csv,low,最低價,
+data/final/stock_daily.csv,close,收盤價,
+data/final/stock_daily.csv,adj_close,調整後收盤,
+data/final/stock_daily.csv,volume,成交量,
+data/final/stock_daily.csv,daily_return,日報酬率,算 AR 用
+data/weights/group_weights.csv,company,所屬公司,join key
+data/weights/group_weights.csv,group,團體名,join key
+data/weights/group_weights.csv,youtube_channel_subscribers,YT 訂閱數,
+data/weights/group_weights.csv,youtube_channel_views,YT 頻道總觀看數,
+data/weights/group_weights.csv,youtube_channel_videos,YT 上傳影片總數,
+data/weights/group_weights.csv,instagram_followers,IG 追蹤數,
+data/weights/group_weights.csv,instagram_url,IG 連結,
+data/weights/group_weights.csv,spotify_monthly_listeners,Spotify 月聽眾,
+data/weights/group_weights.csv,spotify_url,Spotify 連結,
+data/weights/group_weights.csv,youtube_channel_subscribers_z,YT 訂閱數 z-score,
+data/weights/group_weights.csv,youtube_channel_views_z,YT 觀看數 z-score,
+data/weights/group_weights.csv,instagram_followers_z,IG 追蹤數 z-score,
+data/weights/group_weights.csv,spotify_monthly_listeners_z,Spotify 聽眾 z-score,
+data/weights/group_weights.csv,fanbase_weight,四個 z-score 平均,回歸核心 互動項用
+data/weights/group_weights.csv,weight_method,權重計算方式說明,metadata
+data/weights/company_weights.csv,company,公司名,join key
+data/weights/company_weights.csv,ticker,股票代號,
+data/weights/company_weights.csv,market_cap,市值 KRW,
+data/weights/company_weights.csv,revenue,年營收 KRW,
+data/weights/company_weights.csv,company_scale_weight,market_cap 的 z-score,回歸控制變數
+data/weights/company_weights.csv,source_date,資料抓取日,metadata
+data/weights/company_weights.csv,source_url,資料來源,metadata
+data/weights/company_weights.csv,notes,備註,
+data/weights/group_youtube_weights.csv,company,所屬公司,join key
+data/weights/group_youtube_weights.csv,group,團體名,join key
+data/weights/group_youtube_weights.csv,youtube_channel_id,頻道 ID,
+data/weights/group_youtube_weights.csv,youtube_channel_title,頻道顯示名稱,
+data/weights/group_youtube_weights.csv,youtube_channel_subscribers,訂閱數,
+data/weights/group_youtube_weights.csv,youtube_channel_views,總觀看數,
+data/weights/group_youtube_weights.csv,youtube_channel_videos,影片總數,
+data/weights/group_youtube_weights.csv,youtube_url,頻道連結,
+data/weights/group_youtube_weights.csv,source_date,抓取日,metadata
+data/weights/group_youtube_weights.csv,notes,備註,
+data/weights/group_instagram_weights.csv,company,所屬公司,join key
+data/weights/group_instagram_weights.csv,group,團體名,join key
+data/weights/group_instagram_weights.csv,instagram_followers,IG 追蹤數,
+data/weights/group_instagram_weights.csv,instagram_url,IG 連結,
+data/weights/group_instagram_weights.csv,source_date,抓取日,metadata
+data/weights/group_instagram_weights.csv,notes,備註,
+data/weights/group_spotify_monthly_listeners.csv,company,所屬公司,join key
+data/weights/group_spotify_monthly_listeners.csv,group,團體名,join key
+data/weights/group_spotify_monthly_listeners.csv,spotify_monthly_listeners,Spotify 月聽眾,
+data/weights/group_spotify_monthly_listeners.csv,spotify_url,Spotify 連結,
+data/weights/group_spotify_monthly_listeners.csv,source_date,抓取日,metadata
+data/weights/group_spotify_monthly_listeners.csv,notes,備註,
+config/keywords.csv,event_id,事件 ID,join key
+config/keywords.csv,company,經紀公司,
+config/keywords.csv,ticker,股票代號,
+config/keywords.csv,group,團體名,
+config/keywords.csv,member,點名成員,
+config/keywords.csv,event_category,事件大類,
+config/keywords.csv,keyword_ko,韓文關鍵字,
+config/keywords.csv,keyword_en,英文關鍵字,
+config/keywords.csv,keyword_zh,中文關鍵字,
+config/keywords.csv,naver_query,實際送給 Naver API 的字串 韓文,
+config/keywords.csv,google_trends_query,實際送給 Google Trends 的字串 英文,
+config/keywords.csv,youtube_query,實際送給 YouTube API 的字串,
+config/keywords.csv,start_date,事件起始日,
+config/keywords.csv,end_date,事件結束日,
+data/raw/naver_results.csv,event_id,事件 ID,join key
+data/raw/naver_results.csv,query,實際查詢字串,
+data/raw/naver_results.csv,source_type,news 或 blog,
+data/raw/naver_results.csv,platform,Naver News 或 Naver Blog,
+data/raw/naver_results.csv,title,文章標題,
+data/raw/naver_results.csv,url,文章連結,
+data/raw/naver_results.csv,published_date,發布日 YYYY-MM-DD,
+data/raw/naver_results.csv,description,摘要,
+data/raw/naver_results.csv,collected_at,爬取時間,
+data/raw/naver_datalab.csv,event_id,事件 ID,join key
+data/raw/naver_datalab.csv,date,日期,join key
+data/raw/naver_datalab.csv,keyword,查詢關鍵字,
+data/raw/naver_datalab.csv,naver_datalab_score,0-100 搜尋指數 事件內相對,
+data/raw/naver_datalab.csv,collected_at,爬取時間,
+data/raw/google_trends.csv,event_id,事件 ID,join key
+data/raw/google_trends.csv,date,日期,join key
+data/raw/google_trends.csv,query,查詢字串,
+data/raw/google_trends.csv,google_trends_score,0-100 trends 指數,
