@@ -51,7 +51,7 @@
 | `traffic_total_normalized` | traffic_total_raw 標準化 | 除以全 panel 最大值 |
 | `data_quality` | 該列品質標籤 | "ok" / "missing_traffic" |
 
-**核心 X 變數 (media_attention)**：用 `traffic_total_raw`，或自己挑 4 個 daily 訊號其中幾個組合。
+**控制變數 (media_attention)**：用 `traffic_total_raw`，或自己挑 4 個 daily 訊號其中幾個組合。控制媒體曝光強度，分離出事件類型本身的效應。
 
 ---
 
@@ -83,7 +83,7 @@
 | `instagram_followers` | IG 追蹤數 | 個別指標 |
 | `spotify_monthly_listeners` | Spotify 月聽眾 | 個別指標 |
 | `*_z` 欄位 | 上述指標的 z-score | 個別指標標準化版本 |
-| `fanbase_weight` | **粉絲基礎權重** | **回歸核心：z-score 平均值，當互動項 `media × fanbase_weight`** |
+| `fanbase_weight` | **粉絲基礎權重** | **回歸控制變數：z-score 平均值** |
 | `weight_method` | 權重計算方式說明 | metadata |
 
 ---
@@ -105,12 +105,14 @@
 
 ## 回歸用變數一覽（精簡版）
 
+研究問題：**不同事件類型對股價的影響程度**。核心是 `event_category` dummies 的 γ_k 係數。
+
 | 角色 | 變數 | 檔案 | 欄位 |
 |---|---|---|---|
 | **Y** | abnormal return AR | stock_daily.csv | 用 daily_return 算 |
-| **X1** | media_attention | traffic_daily.csv | traffic_total_raw |
-| **X2 (核心互動)** | × fanbase_weight | group_weights.csv | fanbase_weight |
-| **X3 (事件類別)** | event_category dummies | events_master.csv | event_category |
-| **X4 (公司控制)** | market_cap | company_weights.csv | company_scale_weight |
+| **X 主變數 (事件類型 dummies)** | event_category | events_master.csv | event_category |
+| 控制變數 | media_attention | traffic_daily.csv | traffic_total_raw |
+| 控制變數 | fanbase_weight | group_weights.csv | fanbase_weight |
+| 控制變數 | market_cap | company_weights.csv | company_scale_weight |
 
 **不要用**：`sentiment_expected`、`severity_score`、`youtube_*`（在 traffic_daily.csv 內的）

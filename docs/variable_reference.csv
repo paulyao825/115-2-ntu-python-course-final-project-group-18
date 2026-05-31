@@ -59,7 +59,7 @@ data/weights/group_weights.csv,youtube_channel_subscribers_z,YT 訂閱數 z-scor
 data/weights/group_weights.csv,youtube_channel_views_z,YT 觀看數 z-score,
 data/weights/group_weights.csv,instagram_followers_z,IG 追蹤數 z-score,
 data/weights/group_weights.csv,spotify_monthly_listeners_z,Spotify 聽眾 z-score,
-data/weights/group_weights.csv,fanbase_weight,四個 z-score 平均,回歸核心 互動項用
+data/weights/group_weights.csv,fanbase_weight,四個 z-score 平均,回歸控制變數
 data/weights/group_weights.csv,weight_method,權重計算方式說明,metadata
 data/weights/company_weights.csv,company,公司名,join key
 data/weights/company_weights.csv,ticker,股票代號,
