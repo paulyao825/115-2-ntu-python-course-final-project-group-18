@@ -27,11 +27,14 @@ https://developers.naver.com/
 kpop-event-crawler
 ```
 
-6. API 權限選擇：
+6. API 權限選擇（兩個都要勾）：
 
 ```text
 검색 Search API
+데이터랩 (검색어트렌드) DataLab Search Trends
 ```
+
+注意：同一組 Client ID/Secret 同時用於兩個 endpoint，不用申請兩個 app。
 
 7. 環境可選：
 
@@ -95,7 +98,14 @@ YOUTUBE_API_KEY=你的YouTubeAPIKey
 
 ## 三、建立本機 `.env`
 
-在專案資料夾執行：
+Mac/Linux：
+
+```bash
+cp .env.example .env
+open -e .env    # Mac 預設文字編輯器
+```
+
+Windows：
 
 ```powershell
 copy .env.example .env
@@ -112,21 +122,21 @@ YOUTUBE_API_KEY=你的YouTubeAPIKey
 
 ## 四、測試順序
 
-先測 Naver：
+Mac/Linux：
+
+```bash
+python scripts/collect_naver.py
+python scripts/collect_naver_datalab.py
+python scripts/collect_google_trends.py
+python scripts/collect_youtube.py
+```
+
+Windows：
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\collect_naver.py
-```
-
-再測 Google Trends：
-
-```powershell
+.\.venv\Scripts\python.exe scripts\collect_naver_datalab.py
 .\.venv\Scripts\python.exe scripts\collect_google_trends.py
-```
-
-再測 YouTube：
-
-```powershell
 .\.venv\Scripts\python.exe scripts\collect_youtube.py
 ```
 

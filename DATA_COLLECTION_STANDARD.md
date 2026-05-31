@@ -26,12 +26,12 @@
 
 | 公司 | 團體 |
 |---|---|
-| JYP | TWICE |
-| SM | aespa |
-| YG | BLACKPINK |
-| HYBE | NewJeans, LE SSERAFIM |
+| JYP | TWICE, Stray Kids |
+| SM | aespa, NCT, EXO |
+| YG | BLACKPINK, BIGBANG |
+| HYBE | NewJeans, LE SSERAFIM, BTS, SEVENTEEN |
 
-建議股票代號：
+股票代號：
 
 | 公司 | 股票代號 |
 |---|---|
@@ -74,7 +74,7 @@ market_confounder
 3. 在 Google Trends、Naver DataLab、YouTube 或新聞量上有明顯熱度。
 4. 事件可合理對應到公司股價分析時間點。
 
-本階段只負責女團事件資料。每個團體收錄：
+本階段收錄男女團事件資料。每個團體收錄：
 
 ```text
 15 筆高影響事件
@@ -83,7 +83,7 @@ market_confounder
 總資料量目標：
 
 ```text
-75 筆事件
+165 筆事件（11 個團體 × 15）
 ```
 
 每家公司至少要有：
@@ -174,14 +174,16 @@ naver_source_url, notes, collector, status
 
 ### Traffic_Daily
 
-一列代表某事件某一天的流量資料。必要欄位：
+一列代表某事件某一天的流量資料。實際欄位：
 
 ```text
 event_id, date, naver_news_count, naver_blog_count, naver_datalab_score,
 google_trends_score, youtube_views, youtube_comments, youtube_likes,
-spotify_popularity, instagram_followers, other_social_count,
-traffic_total_raw, traffic_total_normalized, data_quality
+instagram_followers, traffic_total_raw, traffic_total_normalized,
+data_quality
 ```
+
+舊版預留欄位 `spotify_popularity` 與 `other_social_count` 已移除（Spotify 2026 起無 API、其他社群無可用免費資料來源）。
 
 ### Sources
 
@@ -241,13 +243,16 @@ Crawler 應完成：
 
 | 腳本 | 功能 |
 |---|---|
-| `collect_naver.py` | 使用 Naver Search API 收集新聞／部落格資料 |
-| `collect_google_trends.py` | 使用 PyTrends 收集 Google Trends 相對熱度 |
+| `collect_naver.py` | 使用 Naver Search API 收集新聞／部落格資料（含分頁，最多 1000 筆/事件） |
+| `collect_naver_datalab.py` | 使用 Naver DataLab API 收集每日搜尋指數 |
+| `collect_google_trends.py` | 使用 PyTrends 收集 Google Trends（可中斷續跑、VPN 輪替） |
 | `collect_youtube.py` | 使用 YouTube Data API 收集影片觀看、留言、按讚數 |
-| `build_daily_traffic.py` | 將事件窗展開成每日資料表 |
+| `collect_stock.py` | 使用 yfinance 收集 4 家公司日股價 |
+| `collect_company_weights.py` | 公司市值、營收 |
+| `collect_youtube_weights.py` | 團體 YouTube 頻道層級統計 |
+| `build_group_weights.py` | 整合團體層級控制變數（YT + IG + Spotify） |
+| `build_daily_traffic.py` | 將事件窗展開成每日資料表，merge 所有 attention 訊號 |
 | `validate_dataset.py` | 檢查資料品質與欄位完整性 |
-
-`collect_stock.py` 保留給負責股價的組員使用，本階段不執行。
 
 API key 不可寫死在程式碼裡，必須放在 `.env`：
 
@@ -256,6 +261,8 @@ NAVER_CLIENT_ID=
 NAVER_CLIENT_SECRET=
 YOUTUBE_API_KEY=
 ```
+
+注意：Naver 同一組 Client ID/Secret 同時用於 Search API 與 DataLab API，需到 Naver Developers Console 把兩個權限都打開。
 
 ## 九、資料品質標準
 

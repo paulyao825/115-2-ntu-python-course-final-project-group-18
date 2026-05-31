@@ -1,51 +1,73 @@
 # K-pop Event Data Collection Project
 
-本資料夾是第18組期末專案的「事件資料蒐集」工作區。
+第 18 組期末專案 — K-pop 偶像事件對所屬經紀公司股價的影響分析。
 
-研究主題：
+研究問題：
 
 ```text
-K-pop 偶像事件、社群熱度與娛樂公司股價波動之關聯性分析
+不同類型的 K-pop 藝人事件（comeback、PR 危機、軍隊、合約等），
+對所屬經紀公司股價的影響程度
 ```
 
-本版本的研究時間範圍固定為：
+研究時間範圍：
 
 ```text
 2021-01-01 至 2026-01-01
 ```
 
-## 主要內容
+## 資料規模
 
-- `DATA_COLLECTION_STANDARD.md`：給教授與組員看的資料蒐集計畫書／標準。
-- `DATA_STATUS_SUMMARY.md`：目前事件清單、已抓 raw data 數量、可分析性與下一步。
-- `config/`：研究對象、事件分類、關鍵字設定。
-- `data/templates/`：CSV 欄位模板，後續直接用 GitHub 管理版本。
-- `scripts/`：Python crawler 與資料驗證腳本。
-- `.env.example`：API key 範本，實際使用時複製成 `.env`。
+- 165 筆事件
+- 11 個團體（BTS、SEVENTEEN、BLACKPINK、NewJeans、LE SSERAFIM、TWICE、aespa、Stray Kids、NCT、EXO、BIGBANG）
+- 4 家公司（HYBE、SM、JYP、YG）
+- 4 個 daily media attention 訊號（Naver News / Blog / DataLab / Google Trends）
+- 4 家公司 5 年 daily 股價
 
-## 建議執行順序
+## 主要文件
 
-1. 複製 `.env.example` 成 `.env`，填入 Naver 與 YouTube API key。
-2. 檢查 `data/templates/events_master.csv` 的 75 筆女團事件。
-3. 檢查 `config/keywords.csv` 的事件級 crawler 關鍵字。
-4. 執行 crawler 收集 Naver、Google Trends、YouTube 熱度資料。
-5. 執行 `scripts/build_daily_traffic.py` 建立每日事件流量資料。
-6. 執行 `scripts/validate_dataset.py` 檢查資料品質。
+開分析、寫報告請先看 `docs/` 下：
 
-股價資料由其他組員負責，本資料夾保留 `scripts/collect_stock.py` 只是作為隊友可選工具。
+- `docs/data_audit.md` — 所有資料目前狀態 / 覆蓋率 / 缺什麼
+- `docs/regression_handoff.md` — 回歸模型、變數、方法論
+- `docs/variable_reference.md` — 所有欄位中文說明
+- `docs/variable_reference.csv` — 同上 CSV 版（Excel 開）
+- `docs/session_changes.md` — 最近一次大改的紀錄
 
-## Python 環境
+舊版說明文件（背景知識用）：
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+- `DATA_COLLECTION_STANDARD.md` — 資料蒐集標準與規範
+- `CREDENTIALS_GUIDE.md` — API key 申請教學
+- `RUN_CRAWLER_NEXT_STEPS.md` — Crawler 執行步驟
+
+## 主要資料夾
+
+- `config/` — 研究對象、關鍵字設定
+- `data/templates/` — 事件 metadata
+- `data/raw/` — Crawler 原始輸出（gitignore 部分排除）
+- `data/final/` — 主分析 panel（traffic_daily.csv、stock_daily.csv）
+- `data/weights/` — 團體與公司控制變數
+- `scripts/` — 所有 Python crawler 與 build script
+- `.env.example` — API key 範本
+
+## 跑 pipeline
+
+```bash
+# 1. 複製 .env.example 為 .env，填入 NAVER_CLIENT_ID / SECRET / YOUTUBE_API_KEY
+cp .env.example .env
+
+# 2. 裝套件
 pip install -r requirements.txt
+
+# 3. 抓資料
+python scripts/collect_stock.py            # 股價
+python scripts/collect_naver.py            # Naver News + Blog
+python scripts/collect_naver_datalab.py    # Naver 搜尋指數
+python scripts/collect_google_trends.py    # Google Trends（可中斷續跑）
+python scripts/collect_youtube.py          # YouTube 統計（quota 限制）
+
+# 4. 組 panel + 驗證
+python scripts/build_daily_traffic.py
+python scripts/validate_dataset.py
 ```
 
-如果 PowerShell 執行政策阻擋啟動虛擬環境，可改用 CMD 或調整本機執行政策。
-
-若不想啟動虛擬環境，可直接使用：
-
-```powershell
-.\.venv\Scripts\python.exe scripts\collect_naver.py
-```
+Google Trends 跑到 429 是正常的（Google rate-limit），切 VPN 後重跑 `collect_google_trends.py` 會自動跳過已完成事件。
