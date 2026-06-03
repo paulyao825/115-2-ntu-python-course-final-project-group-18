@@ -1,0 +1,33 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              CAR_m5_p5   R-squared:                       0.169
+Model:                            OLS   Adj. R-squared:                  0.060
+Method:                 Least Squares   F-statistic:                     1.162
+Date:                Sat, 30 May 2026   Prob (F-statistic):              0.333
+Time:                        18:04:17   Log-Likelihood:                 95.153
+No. Observations:                  79   AIC:                            -170.3
+Df Residuals:                      69   BIC:                            -146.6
+Df Model:                           9                                         
+Covariance Type:                  HC3                                         
+===================================================================================================================
+                                                      coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                          -0.0046      0.014     -0.342      0.733      -0.031       0.022
+C(event_type_final)[T.positive_comeback]           -0.0247      0.026     -0.948      0.343      -0.076       0.026
+C(event_type_final)[T.positive_concert]             0.0045      0.022      0.200      0.842      -0.039       0.048
+C(event_type_final)[T.positive_resolution]          0.0246      0.058      0.424      0.672      -0.089       0.139
+C(event_type_final)[T.negative_PR_crisis]           0.0113      0.033      0.341      0.733      -0.054       0.076
+C(event_type_final)[T.negative_contract_crisis]    -0.1014      0.054     -1.886      0.059      -0.207       0.004
+C(event_type_final)[T.dating]                      -0.0634      0.046     -1.390      0.165      -0.153       0.026
+C(event_type_final)[T.artist_transition]            0.0212      0.114      0.186      0.853      -0.203       0.245
+log_market_cap_c                                   -0.0178      0.012     -1.460      0.144      -0.042       0.006
+log_youtube_channel_subscribers_c                  -0.0192      0.010     -1.868      0.062      -0.039       0.001
+==============================================================================
+Omnibus:                        7.484   Durbin-Watson:                   2.368
+Prob(Omnibus):                  0.024   Jarque-Bera (JB):                8.666
+Skew:                          -0.449   Prob(JB):                       0.0131
+Kurtosis:                       4.352   Cond. No.                         8.61
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

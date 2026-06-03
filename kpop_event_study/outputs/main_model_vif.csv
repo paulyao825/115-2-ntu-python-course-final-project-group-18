@@ -1,0 +1,11 @@
+variable,VIF
+Intercept,5.781729364196241
+C(event_type_final)[T.positive_comeback],1.5488920769431167
+C(event_type_final)[T.positive_concert],1.8997714667692531
+C(event_type_final)[T.positive_resolution],1.2261098053792332
+C(event_type_final)[T.negative_PR_crisis],1.7260697583104911
+C(event_type_final)[T.negative_contract_crisis],1.3461173405977365
+C(event_type_final)[T.dating],1.239737357155828
+C(event_type_final)[T.artist_transition],1.2750663546914964
+log_market_cap_c,1.0624495239297258
+log_youtube_channel_subscribers_c,1.1292605467515215

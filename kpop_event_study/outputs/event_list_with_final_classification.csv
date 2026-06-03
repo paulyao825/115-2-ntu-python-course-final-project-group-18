@@ -1,0 +1,166 @@
+event_id,company,group,member,event_title_en,start_date,sentiment_expected,event_category,event_subtype,event_type_final
+TWICE_20210609_ALCOHOL_FREE,JYP,TWICE,,TWICE Alcohol-Free and Taste of Love comeback,2021-05-31,positive,comeback,title_track_release,positive_comeback
+TWICE_20211001_THE_FEELS,JYP,TWICE,,TWICE releases first English single The Feels,2021-10-01,positive,comeback,english_single_release,positive_comeback
+TWICE_20220712_CONTRACT_RENEWAL,JYP,TWICE,,All TWICE members renew contracts with JYP,2022-07-12,positive,contract_member,group_contract_renewal,positive_resolution
+TWICE_20230221_READY_TO_BE_TOUR,JYP,TWICE,,TWICE announces Ready To Be world tour,2023-02-21,positive,concert,world_tour_announcement,positive_concert
+TWICE_20230424_METLIFE_SOLDOUT,JYP,TWICE,,TWICE sells out MetLife Stadium concert,2023-04-24,positive,concert,stadium_sold_out,positive_concert
+AESPA_20210517_NEXT_LEVEL,SM,aespa,,aespa releases Next Level,2021-05-06,positive,comeback,single_release,positive_comeback
+AESPA_20220423_COACHELLA,SM,aespa,,aespa performs at Coachella 2022,2022-04-19,positive,activity,festival_performance,positive_activity
+AESPA_20230607_GISELLE_HEALTH,SM,aespa,Giselle,Giselle pauses activities for health reasons,2023-06-07,negative,PR_crisis,health_hiatus,negative_PR_crisis
+AESPA_20240227_KARINA_DATING_BREAKUP,SM,aespa,Karina,Karina and Lee Jae-wook dating news and breakup,2024-02-27,mixed,dating,confirmed_and_breakup,dating
+AESPA_20240527_ARMAGEDDON,SM,aespa,,aespa releases first full album Armageddon,2024-04-22,positive,comeback,first_full_album,positive_comeback
+BLACKPINK_20220819_PINK_VENOM,YG,BLACKPINK,,BLACKPINK releases Pink Venom,2022-08-19,positive,comeback,pre_release_single,positive_comeback
+BLACKPINK_20220916_BORN_PINK,YG,BLACKPINK,,BLACKPINK releases Born Pink,2022-09-16,positive,comeback,album_release,positive_comeback
+BLACKPINK_20230110_COACHELLA_HEADLINER,YG,BLACKPINK,,BLACKPINK announced as Coachella 2023 headliner,2023-01-10,positive,concert,festival_headliner_announcement,positive_concert
+BLACKPINK_20231206_GROUP_CONTRACT_RENEWAL,YG,BLACKPINK,,BLACKPINK renews group contract with YG,2023-12-06,positive,contract_member,group_contract_renewal,positive_resolution
+BLACKPINK_20231229_INDIVIDUAL_CONTRACTS,YG,BLACKPINK,,BLACKPINK members do not renew individual contracts with YG,2023-12-29,mixed,contract_member,individual_contracts_not_renewed,artist_transition
+NEWJEANS_20220722_ATTENTION_DEBUT,HYBE,NewJeans,,NewJeans surprise debuts with Attention,2022-07-22,positive,comeback,debut_release,positive_comeback
+NEWJEANS_20221219_DITTO,HYBE,NewJeans,,NewJeans releases Ditto,2022-12-19,positive,comeback,pre_release_single,positive_comeback
+NEWJEANS_20240411_HYEIN_INJURY,HYBE,NewJeans,Hyein,Hyein halts activities due to foot injury,2024-04-11,negative,PR_crisis,injury_hiatus,negative_PR_crisis
+NEWJEANS_20240422_HYBE_ADOR_DISPUTE,HYBE,NewJeans,,HYBE and ADOR dispute involving NewJeans begins,2024-04-22,negative,contract_member,management_contract_dispute,negative_contract_crisis
+NEWJEANS_20241128_CONTRACT_TERMINATION,HYBE,NewJeans,,NewJeans announces contract termination with ADOR,2024-11-28,negative,contract_member,contract_termination_press_conference,negative_contract_crisis
+LESSERAFIM_20220502_FEARLESS_DEBUT,HYBE,LE SSERAFIM,,LE SSERAFIM debuts with Fearless,2022-05-02,positive,comeback,debut_release,positive_comeback
+LESSERAFIM_20220720_GARAM_TERMINATION,HYBE,LE SSERAFIM,Kim Garam,Kim Garam leaves LE SSERAFIM after bullying controversy,2022-07-20,negative,PR_crisis,bullying_contract_termination,negative_PR_crisis
+LESSERAFIM_20221017_ANTIFRAGILE,HYBE,LE SSERAFIM,,LE SSERAFIM releases Antifragile,2022-10-17,positive,comeback,first_ot5_comeback,positive_comeback
+LESSERAFIM_20240219_SMART_MINOR_CONTROVERSY,HYBE,LE SSERAFIM,Eunchae,Smart choreography receives criticism over minor member concept,2024-02-19,negative,PR_crisis,minor_choreography_controversy,negative_PR_crisis
+LESSERAFIM_20240413_COACHELLA_CRITICISM,HYBE,LE SSERAFIM,,LE SSERAFIM Coachella performance receives mixed reviews,2024-04-13,negative,PR_crisis,live_vocal_criticism,negative_PR_crisis
+TWICE_20210818_JEONGYEON_HIATUS,JYP,TWICE,Jeongyeon,Jeongyeon takes hiatus due to panic and anxiety disorder,2021-08-18,negative,PR_crisis,health_hiatus,negative_PR_crisis
+TWICE_20220624_NAYEON_POP,JYP,TWICE,Nayeon,Nayeon makes solo debut with Pop,2022-06-24,positive,activity,solo_debut,positive_activity
+TWICE_20230324_SOFI_SOLDOUT,JYP,TWICE,,TWICE becomes first girl group to sell out SoFi Stadium,2023-03-23,positive,concert,stadium_sold_out,positive_concert
+TWICE_20230321_CHAEYOUNG_SHIRT,JYP,TWICE,Chaeyoung,Chaeyoung apologizes for controversial shirt post,2023-03-21,negative,PR_crisis,controversial_clothing_apology,negative_PR_crisis
+TWICE_20230310_SET_ME_FREE,JYP,TWICE,,TWICE releases Ready To Be and Set Me Free,2023-03-10,positive,comeback,album_release,positive_comeback
+TWICE_20230726_MISAMO_DEBUT,JYP,TWICE,MISAMO,MISAMO debuts in Japan with Masterpiece,2023-07-26,positive,activity,subunit_debut,positive_activity
+TWICE_20240325_JIHYO_DATING_RUMOR,JYP,TWICE,Jihyo,Jihyo and Yun Sung-bin dating rumor receives agency response,2024-03-25,mixed,dating,dating_rumor_agency_no_comment,dating
+TWICE_20240223_ONE_SPARK,JYP,TWICE,,TWICE releases One Spark and With YOU-th,2024-02-23,positive,comeback,album_release,positive_comeback
+TWICE_20241206_STRATEGY,JYP,TWICE,,TWICE releases Strategy,2024-12-06,positive,comeback,album_release,positive_comeback
+TWICE_20240405_CHAEYOUNG_ZIONT,JYP,TWICE,Chaeyoung,Chaeyoung and Zion.T confirmed to be dating,2024-04-05,mixed,dating,confirmed_dating,dating
+AESPA_20240412_WINTER_SURGERY,SM,aespa,Winter,Winter takes break after pneumothorax surgery,2024-04-12,negative,PR_crisis,health_surgery_break,negative_PR_crisis
+AESPA_20240305_KARINA_APOLOGY,SM,aespa,Karina,Karina apologizes to fans after dating backlash,2024-03-05,negative,PR_crisis,dating_backlash_apology,negative_PR_crisis
+AESPA_20230225_SYNKK_HYPER_LINE,SM,aespa,,aespa starts Synk Hyper Line concert,2023-02-25,positive,concert,first_concert,positive_concert
+AESPA_20240402_KARINA_BREAKUP,SM,aespa,Karina,Karina and Lee Jae-wook confirm breakup,2024-04-02,mixed,dating,breakup,dating
+AESPA_20230508_MY_WORLD_SPICY,SM,aespa,,aespa releases My World and Spicy,2023-05-08,positive,comeback,mini_album_release,positive_comeback
+AESPA_20241211_WINTER_JUNGWON,SM,aespa,Winter,Winter and Jungwon dating rumor denied by agencies,2024-12-11,mixed,dating,denied_dating_rumor,dating
+AESPA_20250528_KARINA_JACKET,SM,aespa,Karina,Karina deletes Instagram photo amid political jacket controversy,2025-05-28,negative,PR_crisis,political_symbol_controversy,negative_PR_crisis
+AESPA_20240513_SUPERNOVA,SM,aespa,,aespa releases Supernova,2024-05-13,positive,comeback,pre_release_single,positive_comeback
+AESPA_20241021_WHIPLASH,SM,aespa,,aespa releases Whiplash,2024-10-21,positive,comeback,mini_album_release,positive_comeback
+AESPA_20251205_WINTER_JUNGKOOK,SM,aespa,Winter,Winter and Jungkook viral dating rumor spreads online,2025-12-05,mixed,dating,viral_dating_rumor_no_comment,dating
+BLACKPINK_20210312_ROSE_ON_THE_GROUND,YG,BLACKPINK,Rose,Rose makes solo debut with On The Ground,2021-03-12,positive,activity,solo_debut,positive_activity
+BLACKPINK_20220523_JENNIE_V_RUMOR,YG,BLACKPINK,Jennie,Jennie and BTS V dating rumor begins with viral Jeju photo,2022-05-23,mixed,dating,dating_rumor_agency_no_comment,dating
+BLACKPINK_20210910_LISA_LALISA,YG,BLACKPINK,Lisa,Lisa makes solo debut with Lalisa,2021-09-10,positive,activity,solo_debut,positive_activity
+BLACKPINK_20220808_BORN_PINK_TOUR_ANNOUNCE,YG,BLACKPINK,,BLACKPINK announces Born Pink world tour,2022-08-08,positive,concert,world_tour_announcement,positive_concert
+BLACKPINK_20230604_THE_IDOL,YG,BLACKPINK,Jennie,Jennie's The Idol debut draws controversy,2023-06-04,mixed,PR_crisis,acting_role_controversy,negative_PR_crisis
+BLACKPINK_20230331_JISOO_FLOWER,YG,BLACKPINK,Jisoo,Jisoo makes solo debut with Flower,2023-03-31,positive,activity,solo_debut,positive_activity
+BLACKPINK_20230928_LISA_CRAZY_HORSE,YG,BLACKPINK,Lisa,Lisa's Crazy Horse Paris performances spark controversy,2023-09-28,mixed,PR_crisis,performance_controversy,negative_PR_crisis
+BLACKPINK_20230917_BORN_PINK_FINALE,YG,BLACKPINK,,BLACKPINK ends Born Pink world tour in Seoul,2023-09-16,positive,concert,tour_finale,positive_concert
+BLACKPINK_20240709_JENNIE_VAPING,YG,BLACKPINK,Jennie,Jennie apologizes for indoor vaping incident,2024-07-08,negative,PR_crisis,indoor_vaping_apology,negative_PR_crisis
+BLACKPINK_20250219_DEADLINE_TOUR,YG,BLACKPINK,,BLACKPINK announces Deadline world tour,2025-02-19,positive,concert,world_tour_announcement,positive_concert
+NEWJEANS_20250207_NJZ_REBRAND,HYBE,NewJeans,,NewJeans members announce NJZ rebrand amid ADOR dispute,2025-02-07,negative,contract_member,rebrand_during_contract_dispute,negative_contract_crisis
+NEWJEANS_20220801_COOKIE_CONTROVERSY,HYBE,NewJeans,,NewJeans Cookie lyrics controversy,2022-08-01,negative,PR_crisis,lyrics_controversy,negative_PR_crisis
+NEWJEANS_20230106_OMG_MV_CONTROVERSY,HYBE,NewJeans,,NewJeans OMG music video draws mental illness aesthetic controversy,2023-01-06,negative,PR_crisis,music_video_controversy,negative_PR_crisis
+NEWJEANS_20230707_SUPER_SHY,HYBE,NewJeans,,NewJeans releases Super Shy,2023-07-07,positive,comeback,pre_release_single,positive_comeback
+NEWJEANS_20230721_ETA_IPHONE,HYBE,NewJeans,,NewJeans releases ETA music video filmed with iPhone,2023-07-21,positive,activity,brand_collaboration_mv,positive_activity
+NEWJEANS_20241010_HANNI_ASSEMBLY_SUMMONS,HYBE,NewJeans,Hanni,Hanni selected to testify at National Assembly over workplace bullying allegation,2024-10-10,negative,PR_crisis,workplace_bullying_summons,negative_PR_crisis
+NEWJEANS_20250321_ADOR_INJUNCTION,HYBE,NewJeans,,Court accepts ADOR injunction limiting NewJeans independent activity,2025-03-21,negative,contract_member,court_injunction,negative_contract_crisis
+NEWJEANS_20240524_HOW_SWEET,HYBE,NewJeans,,NewJeans releases How Sweet,2024-05-24,positive,comeback,single_release,positive_comeback
+NEWJEANS_20250324_NJZ_HIATUS,HYBE,NewJeans,,NJZ announces hiatus amid ADOR contract dispute,2025-03-24,negative,contract_member,activity_pause,negative_contract_crisis
+NEWJEANS_20241015_HANNI_ASSEMBLY,HYBE,NewJeans,Hanni,Hanni testifies at National Assembly,2024-10-15,negative,PR_crisis,workplace_bullying_testimony,negative_PR_crisis
+LESSERAFIM_20240717_SOURCE_ADOR_LAWSUIT,HYBE,LE SSERAFIM,,Source Music sues ADOR CEO over LE SSERAFIM comments,2024-07-17,negative,contract_member,inter_label_legal_action,negative_contract_crisis
+LESSERAFIM_20220520_GARAM_HIATUS,HYBE,LE SSERAFIM,Kim Garam,Kim Garam goes on hiatus amid school bullying controversy,2022-05-20,negative,PR_crisis,bullying_hiatus,negative_PR_crisis
+LESSERAFIM_20230812_FLAME_RISES,HYBE,LE SSERAFIM,,LE SSERAFIM starts Flame Rises tour,2023-08-12,positive,concert,first_tour_start,positive_concert
+LESSERAFIM_20240829_EUNCHAE_APOLOGY,HYBE,LE SSERAFIM,Eunchae,Eunchae apologizes for student-mocking controversy,2024-08-29,negative,PR_crisis,school_remark_apology,negative_PR_crisis
+LESSERAFIM_20240219_EASY_RELEASE,HYBE,LE SSERAFIM,,LE SSERAFIM releases Easy,2024-02-19,positive,comeback,mini_album_release,positive_comeback
+LESSERAFIM_20240403_KAZUHA_DATING,HYBE,LE SSERAFIM,Kazuha,HYBE denies Kazuha and &TEAM K dating rumor,2024-04-03,mixed,dating,denied_dating_rumor,dating
+LESSERAFIM_20240729_DOCUMENTARY,HYBE,LE SSERAFIM,,LE SSERAFIM releases Make It Look Easy documentary,2024-07-29,mixed,activity,documentary_release,positive_activity
+LESSERAFIM_20240830_CRAZY,HYBE,LE SSERAFIM,,LE SSERAFIM releases Crazy,2024-08-30,positive,comeback,mini_album_release,positive_comeback
+LESSERAFIM_20231016_CHAEWON_HEALTH,HYBE,LE SSERAFIM,Kim Chaewon,Kim Chaewon suspends activities for health recovery,2023-10-16,negative,PR_crisis,health_hiatus,negative_PR_crisis
+LESSERAFIM_20250314_HOT,HYBE,LE SSERAFIM,,LE SSERAFIM releases Hot,2025-03-14,positive,comeback,mini_album_release,positive_comeback
+SEVENTEEN_20210228_MINGYU_BULLYING_ALLEGATION_PLEDIS_ADDRESSES_M,HYBE,SEVENTEEN,Mingyu,PLEDIS addresses Mingyu school bullying allegations,2021-02-28,negative,PR_crisis,bullying_allegation,negative_PR_crisis
+SEVENTEEN_20210406_MINGYU_ALLEGATION_CLEARED_MINGYU_RESUMES_ACTI,HYBE,SEVENTEEN,Mingyu,Mingyu resumes activities after bullying allegations are addressed,2021-04-06,positive,PR_crisis,allegation_cleared,positive_resolution
+SEVENTEEN_20210719_NAN_CONTRACT_RENEWAL_ALL_13_SEVENTEEN_MEMBERS,HYBE,SEVENTEEN,,All 13 SEVENTEEN members renew contracts with PLEDIS,2021-07-19,positive,contract_member,contract_renewal,positive_resolution
+SEVENTEEN_20220625_NAN_WORLD_TOUR_START_SEVENTEEN_BEGINS_BE_THE_,HYBE,SEVENTEEN,,SEVENTEEN begins Be The Sun world tour,2022-06-25,positive,concert,world_tour_start,positive_concert
+SEVENTEEN_20230721_NAN_TOUR_START_SEVENTEEN_BEGINS_FOLLOW_TO_SEO,HYBE,SEVENTEEN,,SEVENTEEN begins FOLLOW TO SEOUL concert,2023-07-21,positive,concert,tour_start,positive_concert
+SEVENTEEN_20231123_NAN_JAPAN_DOME_TOUR_SEVENTEEN_BEGINS_FOLLOW_T,HYBE,SEVENTEEN,,SEVENTEEN begins FOLLOW TO JAPAN dome tour leg,2023-11-23,positive,concert,japan_dome_tour,positive_concert
+SEVENTEEN_20240330_NAN_ENCORE_CONCERT_SEVENTEEN_HOLDS_FOLLOW_AGA,HYBE,SEVENTEEN,,SEVENTEEN holds FOLLOW AGAIN TO INCHEON,2024-03-30,positive,concert,encore_concert,positive_concert
+SEVENTEEN_20240626_NAN_GOODWILL_AMBASSADOR_SEVENTEEN_APPOINTED_U,HYBE,SEVENTEEN,,SEVENTEEN appointed UNESCO Goodwill Ambassador for Youth,2024-06-26,positive,activity,goodwill_ambassador,positive_activity
+SEVENTEEN_20240628_NAN_FESTIVAL_PERFORMANCE_SEVENTEEN_PERFORMS_A,HYBE,SEVENTEEN,,SEVENTEEN performs at Glastonbury Festival,2024-06-28,positive,concert,festival_performance,positive_concert
+SEVENTEEN_20241012_NAN_WORLD_TOUR_START_SEVENTEEN_BEGINS_RIGHT_H,HYBE,SEVENTEEN,,SEVENTEEN begins RIGHT HERE world tour in Goyang,2024-10-12,positive,concert,world_tour_start,positive_concert
+SEVENTEEN_20250216_NAN_TOUR_END_SEVENTEEN_CONCLUDES_RIGHT_HERE_W,HYBE,SEVENTEEN,,SEVENTEEN concludes RIGHT HERE world tour in Bangkok,2025-02-16,positive,concert,tour_end,positive_concert
+SEVENTEEN_20250505_S_COUPS_FASHION_EVENT_S_COUPS_MAKES_MET_GALA_,HYBE,SEVENTEEN,S.Coups,S.Coups makes Met Gala debut with BOSS,2025-05-05,positive,activity,fashion_event,positive_activity
+SEVENTEEN_20250819_MINGYU_BRAND_CAMPAIGN_MINGYU_FRONTS_CALVIN_KL,HYBE,SEVENTEEN,Mingyu,Mingyu fronts Calvin Klein Fall 2025 denim campaign,2025-08-19,positive,activity,brand_campaign,positive_activity
+SEVENTEEN_20250913_NAN_WORLD_TOUR_START_SEVENTEEN_BEGINS_NEW_WOR,HYBE,SEVENTEEN,,SEVENTEEN begins NEW_ world tour in Incheon,2025-09-13,positive,concert,world_tour_start,positive_concert
+SEVENTEEN_20251222_NAN_JAPAN_DOME_TOUR_END_SEVENTEEN_CONCLUDES_2,HYBE,SEVENTEEN,,SEVENTEEN concludes 2025 Japan dome tour across four major domes,2025-12-22,positive,concert,japan_dome_tour_end,positive_concert
+BTS_20210927_NAN_OFFLINE_CONCERT_ANNOUNCEMENT_BTS_ANNOUNCE,HYBE,BTS,,BTS announces Permission to Dance On Stage LA concerts,2021-09-27,positive,concert,offline_concert_announcement,positive_concert
+BTS_20211127_NAN_OFFLINE_CONCERT_START_BTS_BEGINS_PERMISSI,HYBE,BTS,,BTS begins Permission to Dance On Stage LA concerts,2021-11-27,positive,concert,offline_concert_start,positive_concert
+BTS_20220310_NAN_SEOUL_CONCERT_START_BTS_BEGINS_PERMISSION,HYBE,BTS,,BTS begins Permission to Dance On Stage Seoul concerts,2022-03-10,positive,concert,seoul_concert_start,positive_concert
+BTS_20220614_NAN_SOLO_ACTIVITY_TRANSITION_BTS_ANNOUNCES_FO,HYBE,BTS,,BTS announces focus on solo activities during 2022 FESTA,2022-06-14,mixed,activity,solo_activity_transition,artist_transition
+BTS_20220731_J_HOPE_FESTIVAL_HEADLINER_J_HOPE_HEADLINES_LO,HYBE,BTS,j-hope,j-hope headlines Lollapalooza as a BTS solo activity,2022-07-31,positive,activity,festival_headliner,positive_activity
+BTS_20221015_NAN_SPECIAL_CONCERT_BTS_HOLDS_YET_TO_COME_IN_,HYBE,BTS,,BTS holds Yet To Come in Busan concert,2022-10-15,positive,concert,special_concert,positive_concert
+BTS_20221017_NAN_MILITARY_SERVICE_PLAN_BIGHIT_MUSIC_CONFIR,HYBE,BTS,,BIGHIT MUSIC confirms BTS will fulfill mandatory military service,2022-10-17,mixed,contract_member,military_service_plan,artist_transition
+BTS_20221213_JIN_MEMBER_ENLISTMENT_JIN_BEGINS_MANDATORY_MI,HYBE,BTS,Jin,Jin begins mandatory military service,2022-12-13,mixed,contract_member,member_enlistment,artist_transition
+BTS_20230518_V_DATING_RUMOR_AGENCY_RESPONSE_V_AND_JENNIE_D,HYBE,BTS,V,V and Jennie dating rumors resurface after Paris video,2023-05-18,mixed,dating,dating_rumor_agency_response,dating
+BTS_20230328_JUNG_KOOK_BRAND_AMBASSADOR_JUNG_KOOK_IS_ANNOU,HYBE,BTS,Jung Kook,Jung Kook is announced as Calvin Klein global ambassador,2023-03-28,positive,activity,brand_ambassador,positive_activity
+BTS_20230920_NAN_CONTRACT_RENEWAL_ALL_SEVEN_BTS_MEMBERS_RE,HYBE,BTS,,All seven BTS members renew contracts with HYBE and BIGHIT MUSIC,2023-09-20,positive,contract_member,contract_renewal,positive_resolution
+BTS_20240823_SUGA_DUI_INCIDENT_SUGA_APPEARS_BEFORE_POLICE_,HYBE,BTS,SUGA,SUGA appears before police over e-scooter drunk driving incident,2024-08-23,negative,PR_crisis,dui_incident,negative_PR_crisis
+BTS_20240930_SUGA_FINE_SUGA_IS_FINED_FOR_E_SCOOTER_DRUNK_D,HYBE,BTS,SUGA,SUGA is fined for e-scooter drunk driving incident,2024-09-30,negative,PR_crisis,fine,negative_PR_crisis
+BTS_20250228_J_HOPE_SOLO_TOUR_START_J_HOPE_BEGINS_HOPE_ON_,HYBE,BTS,j-hope,j-hope begins HOPE ON THE STAGE solo tour in Seoul,2025-02-28,positive,concert,solo_tour_start,positive_concert
+BTS_20250628_JIN_SOLO_FAN_CONCERT_TOUR_START_JIN_BEGINS_RU,HYBE,BTS,Jin,Jin begins RUNSEOKJIN_EP.TOUR in Goyang,2025-06-28,positive,concert,solo_fan_concert_tour_start,positive_concert
+STRAY_KIDS_20210227_HYUNJIN_BULLYING_ALLEGATION_ACTIVITY_PAUSE_HY,JYP,Stray Kids,Hyunjin,Hyunjin pauses activities amid school bullying allegations,2021-02-27,negative,PR_crisis,bullying_allegation_activity_pause,negative_PR_crisis
+STRAY_KIDS_20210626_HYUNJIN_ACTIVITY_RESUME_HYUNJIN_RESUMES_STRAY,JYP,Stray Kids,Hyunjin,Hyunjin resumes Stray Kids activities,2021-06-26,positive,activity,activity_resume,positive_activity
+STRAY_KIDS_20220307_NAN_WORLD_TOUR_ANNOUNCEMENT_STRAY_KIDS_ANNOUN,JYP,Stray Kids,,Stray Kids announces Maniac world tour,2022-03-07,positive,concert,world_tour_announcement,positive_concert
+STRAY_KIDS_20220429_NAN_WORLD_TOUR_START_STRAY_KIDS_BEGINS_MANIAC,JYP,Stray Kids,,Stray Kids begins Maniac world tour in Seoul,2022-04-29,positive,concert,world_tour_start,positive_concert
+STRAY_KIDS_20230822_FELIX_BRAND_AMBASSADOR_FELIX_BECOMES_LOUIS_VU,JYP,Stray Kids,Felix,Felix becomes Louis Vuitton House Ambassador,2023-08-22,positive,activity,brand_ambassador,positive_activity
+STRAY_KIDS_20230816_NAN_DOME_TOUR_START_STRAY_KIDS_BEGINS_5_STAR_,JYP,Stray Kids,,Stray Kids begins 5-Star Dome Tour,2023-08-16,positive,concert,dome_tour_start,positive_concert
+STRAY_KIDS_20240712_NAN_FESTIVAL_HEADLINER_STRAY_KIDS_HEADLINES_I,JYP,Stray Kids,,Stray Kids headlines I-Days Milano,2024-07-12,positive,concert,festival_headliner,positive_concert
+STRAY_KIDS_20240714_NAN_FESTIVAL_HEADLINER_STRAY_KIDS_HEADLINES_B,JYP,Stray Kids,,Stray Kids headlines BST Hyde Park,2024-07-14,positive,concert,festival_headliner,positive_concert
+STRAY_KIDS_20240718_NAN_CONTRACT_RENEWAL_ALL_EIGHT_STRAY_KIDS_MEM,JYP,Stray Kids,,All eight Stray Kids members renew contracts with JYP Entertainment,2024-07-18,positive,contract_member,contract_renewal,positive_resolution
+STRAY_KIDS_20240802_NAN_FESTIVAL_HEADLINER_STRAY_KIDS_HEADLINES_L,JYP,Stray Kids,,Stray Kids headlines Lollapalooza Chicago,2024-08-02,positive,concert,festival_headliner,positive_concert
+STRAY_KIDS_20240824_NAN_WORLD_TOUR_START_STRAY_KIDS_BEGINS_DOMINA,JYP,Stray Kids,,Stray Kids begins dominATE world tour in Seoul,2024-08-24,positive,concert,world_tour_start,positive_concert
+STRAY_KIDS_20240724_BANG_CHAN_CHANGBIN_HAN_SOUNDTRACK_RELEASE_3RA,JYP,Stray Kids,"Bang Chan, Changbin, Han",3RACHA contributes Slash to Deadpool & Wolverine soundtrack,2024-07-24,positive,activity,soundtrack_release,positive_activity
+STRAY_KIDS_20241118_NAN_STADIUM_DATES_ANNOUNCEMENT_STRAY_KIDS_ANN,JYP,Stray Kids,,Stray Kids announces 20 new stadium dates for 2025 dominATE tour,2024-11-18,positive,concert,stadium_dates_announcement,positive_concert
+STRAY_KIDS_20250528_NAN_STADIUM_CONCERT_STRAY_KIDS_PERFORMS_DOMIN,JYP,Stray Kids,,Stray Kids performs dominATE concert at Oracle Park San Francisco,2025-05-28,positive,concert,stadium_concert,positive_concert
+STRAY_KIDS_20250727_NAN_SOLD_OUT_STADIUM_CONCERT_STRAY_KIDS_PERFO,JYP,Stray Kids,,Stray Kids performs sold-out dominATE concerts at Stade de France,2025-07-27,positive,concert,sold_out_stadium_concert,positive_concert
+NCT_20210825_LUCAS_PRIVATE_LIFE_CONTROVERSY_LUCAS_APOLOGIZ,SM,NCT,Lucas,Lucas apologizes and halts activities after private-life controversy,2021-08-25,negative,PR_crisis,private_life_controversy,negative_PR_crisis
+NCT_20211217_NAN_OFFLINE_CONCERT_START_NCT_127_BEGINS_NEO_,SM,NCT,,NCT 127 begins Neo City The Link tour in Seoul,2021-12-17,positive,concert,offline_concert_start,positive_concert
+NCT_20220908_NAN_WORLD_TOUR_START_NCT_DREAM_BEGINS_THE_DRE,SM,NCT,,NCT DREAM begins The Dream Show 2 tour in Seoul,2022-09-08,positive,concert,world_tour_start,positive_concert
+NCT_20230826_NAN_GROUP_CONCERT_START_NCT_BEGINS_NCT_NATION,SM,NCT,,NCT begins NCT NATION To The World concert series,2023-08-26,positive,concert,group_concert_start,positive_concert
+NCT_20230510_LUCAS_MEMBER_DEPARTURE_LUCAS_LEAVES_NCT_AND_W,SM,NCT,Lucas,Lucas leaves NCT and WayV,2023-05-10,mixed,contract_member,member_departure,artist_transition
+NCT_20231117_NAN_TOUR_START_NCT_127_BEGINS_NEO_CITY_THE_UN,SM,NCT,,NCT 127 begins Neo City The Unity tour in Seoul,2023-11-17,positive,concert,tour_start,positive_concert
+NCT_20240221_NAN_NEW_UNIT_DEBUT_NCT_WISH_DEBUTS_AS_THE_FIN,SM,NCT,,NCT WISH debuts as the final NCT unit,2024-02-21,positive,activity,new_unit_debut,positive_activity
+NCT_20240422_DOYOUNG_SOLO_ACTIVITY_DOYOUNG_BEGINS_SOLO_ART,SM,NCT,Doyoung,Doyoung begins solo artist activities with Youth,2024-04-22,positive,activity,solo_activity,positive_activity
+NCT_20240502_NAN_WORLD_TOUR_START_NCT_DREAM_BEGINS_THE_DRE,SM,NCT,,NCT DREAM begins The Dream Show 3 world tour in Seoul,2024-05-02,positive,concert,world_tour_start,positive_concert
+NCT_20240604_JOHNNY_HAECHAN_RUMOR_DENIAL_SM_DENIES_RUMORS_,SM,NCT,"Johnny, Haechan",SM denies rumors involving Johnny and Haechan,2024-06-04,negative,PR_crisis,rumor_denial,negative_PR_crisis
+NCT_20240828_TAEIL_CRIMINAL_ALLEGATION_MEMBER_REMOVED_TAEI,SM,NCT,Taeil,Taeil is removed from NCT after sexual offense allegations,2024-08-28,negative,PR_crisis,criminal_allegation_member_removed,negative_PR_crisis
+NCT_20240828_TAEIL_MEMBER_REMOVED_TAEIL_S_REMOVAL_CHANGES_,SM,NCT,Taeil,Taeil's removal changes NCT member structure,2024-08-28,negative,contract_member,member_removed,negative_contract_crisis
+NCT_20250118_NAN_WORLD_TOUR_START_NCT_127_BEGINS_NEO_CITY_,SM,NCT,,NCT 127 begins Neo City The Momentum tour in Seoul,2025-01-18,positive,concert,world_tour_start,positive_concert
+NCT_20250407_MARK_SOLO_ACTIVITY_MARK_BEGINS_SOLO_ACTIVITIE,SM,NCT,Mark,Mark begins solo activities with The Firstfruit,2025-04-07,positive,activity,solo_activity,positive_activity
+NCT_20250710_NAN_WORLD_TOUR_START_NCT_DREAM_BEGINS_THE_DRE,SM,NCT,,NCT DREAM begins The Dream Show 4 in Seoul,2025-07-10,positive,concert,world_tour_start,positive_concert
+EXO_20220928_CHANYEOL_MILITARY_DISCHARGE_ACTIVITY_RETURN_C,SM,EXO,Chanyeol,Chanyeol is discharged from military service and prepares to resume activities,2022-09-28,positive,activity,military_discharge_activity_return,positive_activity
+EXO_20230601_CHEN_BAEKHYUN_XIUMIN_CONTRACT_TERMINATION_NOT,SM,EXO,"Chen, Baekhyun, Xiumin","Chen, Baekhyun, and Xiumin notify SM of contract termination",2023-06-01,negative,contract_member,contract_termination_notice,negative_contract_crisis
+EXO_20230619_CHEN_BAEKHYUN_XIUMIN_CONTRACT_DISPUTE_SETTLEM,SM,EXO,"Chen, Baekhyun, Xiumin",EXO-CBX and SM resolve contract dispute and maintain contracts,2023-06-19,positive,contract_member,contract_dispute_settlement,positive_resolution
+EXO_20230511_KAI_MEMBER_ENLISTMENT_KAI_BEGINS_MANDATORY_MI,SM,EXO,Kai,Kai begins mandatory military service,2023-05-11,mixed,contract_member,member_enlistment,artist_transition
+EXO_20231018_D_O_AGENCY_DEPARTURE_SOLO_MANAGEMENT_D_O_LEAV,SM,EXO,D.O.,D.O. leaves SM for solo activities while remaining in EXO,2023-10-18,mixed,contract_member,agency_departure_solo_management,artist_transition
+EXO_20240414_NAN_FAN_MEETING_EXO_HOLDS_2024_EXO_FAN_MEETIN,SM,EXO,,EXO holds 2024 EXO FAN MEETING: ONE,2024-04-14,positive,concert,fan_meeting,positive_concert
+EXO_20240610_CHEN_BAEKHYUN_XIUMIN_AGENCY_CONFLICT_PRESS_CO,SM,EXO,"Chen, Baekhyun, Xiumin",EXO-CBX agency holds press conference against SM Entertainment,2024-06-10,negative,PR_crisis,agency_conflict_press_conference,negative_PR_crisis
+EXO_20240610_CHEN_BAEKHYUN_XIUMIN_CONTRACT_DISPUTE_REIGNIT,SM,EXO,"Chen, Baekhyun, Xiumin",SM and EXO-CBX clash again over contract and distribution terms,2024-06-10,negative,contract_member,contract_dispute_reignites,negative_contract_crisis
+EXO_20240316_BAEKHYUN_SOLO_CONCERT_TOUR_BAEKHYUN_BEGINS_LO,SM,EXO,Baekhyun,Baekhyun begins Lonsdaleite solo Asia tour,2024-03-16,positive,activity,solo_concert_tour,positive_activity
+EXO_20240525_SUHO_SOLO_CONCERT_TOUR_SUHO_BEGINS_SU_HOME_SO,SM,EXO,Suho,Suho begins SU:HOME solo concert tour,2024-05-25,positive,activity,solo_concert_tour,positive_activity
+EXO_20240906_CHANYEOL_SOLO_CONCERT_TOUR_CHANYEOL_BEGINS_CI,SM,EXO,Chanyeol,Chanyeol begins City-scape solo live tour,2024-09-06,positive,activity,solo_concert_tour,positive_activity
+EXO_20250210_KAI_MILITARY_DISCHARGE_ACTIVITY_RETURN_KAI_IS,SM,EXO,Kai,Kai is discharged from military service and prepares solo activities,2025-02-10,positive,activity,military_discharge_activity_return,positive_activity
+EXO_20250517_KAI_SOLO_CONCERT_KAI_BEGINS_2025_KAION_SOLO_C,SM,EXO,Kai,Kai begins 2025 KAION solo concert tour in Seoul,2025-05-17,positive,concert,solo_concert,positive_concert
+EXO_20250923_CHEN_BAEKHYUN_XIUMIN_SETTLEMENT_FAILURE_SM_AN,SM,EXO,"Chen, Baekhyun, Xiumin",SM and EXO-CBX fail to reach settlement in contract dispute,2025-09-23,negative,contract_member,settlement_failure,negative_contract_crisis
+EXO_20251029_CHEN_BAEKHYUN_XIUMIN_FAN_MEETING_ABSENCE_EXO_,SM,EXO,"Chen, Baekhyun, Xiumin",EXO-CBX will not attend upcoming EXO fan meeting amid SM negotiations,2025-10-29,negative,PR_crisis,fan_meeting_absence,negative_PR_crisis
+BIGBANG_20220207_T_O_P_AGENCY_DEPARTURE_T_O_P_LEAVES_YG_ENTERT,YG,BIGBANG,T.O.P,T.O.P leaves YG Entertainment after his exclusive contract expires,2022-02-07,mixed,contract_member,agency_departure,artist_transition
+BIGBANG_20220405_NAN_GROUP_COMEBACK_ACTIVITY_BIGBANG_RETURNS_W,YG,BIGBANG,,BIGBANG returns with Still Life after a four-year hiatus,2022-04-05,positive,activity,group_comeback_activity,positive_activity
+BIGBANG_20230531_T_O_P_MEMBER_DEPARTURE_CONFIRMED_T_O_P_CONFIR,YG,BIGBANG,T.O.P,T.O.P confirms departure from BIGBANG,2023-05-31,mixed,contract_member,member_departure_confirmed,artist_transition
+BIGBANG_20231106_G_DRAGON_DRUG_ALLEGATION_INVESTIGATION_G_DRAG,YG,BIGBANG,G-Dragon,G-Dragon appears before police over alleged drug use,2023-11-06,negative,PR_crisis,drug_allegation_investigation,negative_PR_crisis
+BIGBANG_20231219_G_DRAGON_DRUG_ALLEGATION_CLEARED_G_DRAGON_IS_,YG,BIGBANG,G-Dragon,G-Dragon is cleared of drug allegations,2023-12-19,positive,PR_crisis,drug_allegation_cleared,positive_resolution
+BIGBANG_20231221_G_DRAGON_AGENCY_TRANSFER_G_DRAGON_JOINS_GALAX,YG,BIGBANG,G-Dragon,G-Dragon joins Galaxy Corporation after leaving YG,2023-12-21,mixed,contract_member,agency_transfer,artist_transition
+BIGBANG_20240305_DAESUNG_SOLO_ACTIVITY_DAESUNG_EXPANDS_SOLO_AC,YG,BIGBANG,Daesung,Daesung expands solo activities after leaving YG,2024-03-05,positive,activity,solo_activity,positive_activity
+BIGBANG_20240601_G_DRAGON_BRAND_EVENT_G_DRAGON_RESUMES_MAJOR_P,YG,BIGBANG,G-Dragon,G-Dragon resumes major public activities after drug allegation clearance,2024-06-01,positive,activity,brand_event,positive_activity
+BIGBANG_20241123_G_DRAGON_TAEYANG_DAESUNG_REUNION_STAGE_G_DRAG,YG,BIGBANG,"G-Dragon, Taeyang, Daesung","G-Dragon, Taeyang, and Daesung reunite on stage",2024-11-23,positive,activity,reunion_stage,positive_activity
+BIGBANG_20241226_T_O_P_ACTING_RETURN_T_O_P_RETURNS_TO_ACTING_T,YG,BIGBANG,T.O.P,T.O.P returns to acting through Squid Game Season 2,2024-12-26,mixed,activity,acting_return,positive_activity
+BIGBANG_20250329_G_DRAGON_SOLO_WORLD_TOUR_START_G_DRAGON_BEGIN,YG,BIGBANG,G-Dragon,G-Dragon begins 2025 Übermensch world tour,2025-03-29,positive,concert,solo_world_tour_start,positive_concert
+BIGBANG_20250623_G_DRAGON_NORTH_AMERICA_EUROPE_TOUR_ANNOUNCEME,YG,BIGBANG,G-Dragon,G-Dragon announces North America and Europe legs of 2025 Übermensch tour,2025-06-23,positive,concert,north_america_europe_tour_announcement,positive_concert
+BIGBANG_20250809_G_DRAGON_SEUNGRI_SUPPORT_SIGNS_CONTROVERSY_SI,YG,BIGBANG,G-Dragon,Signs supporting Seungri at G-Dragon concert spark online debate,2025-08-09,negative,PR_crisis,seungri_support_signs_controversy,negative_PR_crisis
+BIGBANG_20251101_G_DRAGON_TAIPEI_DOME_CONCERT_G_DRAGON_PERFORM,YG,BIGBANG,G-Dragon,G-Dragon performs 2025 Übermensch concerts at Taipei Dome,2025-11-01,positive,concert,taipei_dome_concert,positive_concert
+BIGBANG_20251214_G_DRAGON_TOUR_CONCLUSION_G_DRAGON_CONCLUDES_2,YG,BIGBANG,G-Dragon,G-Dragon concludes 2025 Übermensch world tour,2025-12-14,positive,concert,tour_conclusion,positive_concert

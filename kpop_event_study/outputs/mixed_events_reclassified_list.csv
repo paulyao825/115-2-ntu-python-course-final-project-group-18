@@ -1,0 +1,24 @@
+event_id,company,group,member,event_category,event_subtype,event_title_en,sentiment_expected,event_type_final
+BLACKPINK_20230604_THE_IDOL,YG,BLACKPINK,Jennie,PR_crisis,acting_role_controversy,Jennie's The Idol debut draws controversy,mixed,negative_PR_crisis
+BLACKPINK_20230928_LISA_CRAZY_HORSE,YG,BLACKPINK,Lisa,PR_crisis,performance_controversy,Lisa's Crazy Horse Paris performances spark controversy,mixed,negative_PR_crisis
+BTS_20220614_NAN_SOLO_ACTIVITY_TRANSITION_BTS_ANNOUNCES_FO,HYBE,BTS,,activity,solo_activity_transition,BTS announces focus on solo activities during 2022 FESTA,mixed,artist_transition
+LESSERAFIM_20240729_DOCUMENTARY,HYBE,LE SSERAFIM,,activity,documentary_release,LE SSERAFIM releases Make It Look Easy documentary,mixed,positive_activity
+BIGBANG_20241226_T_O_P_ACTING_RETURN_T_O_P_RETURNS_TO_ACTING_T,YG,BIGBANG,T.O.P,activity,acting_return,T.O.P returns to acting through Squid Game Season 2,mixed,positive_activity
+BTS_20221017_NAN_MILITARY_SERVICE_PLAN_BIGHIT_MUSIC_CONFIR,HYBE,BTS,,contract_member,military_service_plan,BIGHIT MUSIC confirms BTS will fulfill mandatory military service,mixed,artist_transition
+BTS_20221213_JIN_MEMBER_ENLISTMENT_JIN_BEGINS_MANDATORY_MI,HYBE,BTS,Jin,contract_member,member_enlistment,Jin begins mandatory military service,mixed,artist_transition
+EXO_20230511_KAI_MEMBER_ENLISTMENT_KAI_BEGINS_MANDATORY_MI,SM,EXO,Kai,contract_member,member_enlistment,Kai begins mandatory military service,mixed,artist_transition
+EXO_20231018_D_O_AGENCY_DEPARTURE_SOLO_MANAGEMENT_D_O_LEAV,SM,EXO,D.O.,contract_member,agency_departure_solo_management,D.O. leaves SM for solo activities while remaining in EXO,mixed,artist_transition
+NCT_20230510_LUCAS_MEMBER_DEPARTURE_LUCAS_LEAVES_NCT_AND_W,SM,NCT,Lucas,contract_member,member_departure,Lucas leaves NCT and WayV,mixed,artist_transition
+BIGBANG_20220207_T_O_P_AGENCY_DEPARTURE_T_O_P_LEAVES_YG_ENTERT,YG,BIGBANG,T.O.P,contract_member,agency_departure,T.O.P leaves YG Entertainment after his exclusive contract expires,mixed,artist_transition
+BIGBANG_20230531_T_O_P_MEMBER_DEPARTURE_CONFIRMED_T_O_P_CONFIR,YG,BIGBANG,T.O.P,contract_member,member_departure_confirmed,T.O.P confirms departure from BIGBANG,mixed,artist_transition
+BIGBANG_20231221_G_DRAGON_AGENCY_TRANSFER_G_DRAGON_JOINS_GALAX,YG,BIGBANG,G-Dragon,contract_member,agency_transfer,G-Dragon joins Galaxy Corporation after leaving YG,mixed,artist_transition
+BLACKPINK_20231229_INDIVIDUAL_CONTRACTS,YG,BLACKPINK,,contract_member,individual_contracts_not_renewed,BLACKPINK members do not renew individual contracts with YG,mixed,artist_transition
+BTS_20230518_V_DATING_RUMOR_AGENCY_RESPONSE_V_AND_JENNIE_D,HYBE,BTS,V,dating,dating_rumor_agency_response,V and Jennie dating rumors resurface after Paris video,mixed,dating
+LESSERAFIM_20240403_KAZUHA_DATING,HYBE,LE SSERAFIM,Kazuha,dating,denied_dating_rumor,HYBE denies Kazuha and &TEAM K dating rumor,mixed,dating
+TWICE_20240325_JIHYO_DATING_RUMOR,JYP,TWICE,Jihyo,dating,dating_rumor_agency_no_comment,Jihyo and Yun Sung-bin dating rumor receives agency response,mixed,dating
+TWICE_20240405_CHAEYOUNG_ZIONT,JYP,TWICE,Chaeyoung,dating,confirmed_dating,Chaeyoung and Zion.T confirmed to be dating,mixed,dating
+AESPA_20240227_KARINA_DATING_BREAKUP,SM,aespa,Karina,dating,confirmed_and_breakup,Karina and Lee Jae-wook dating news and breakup,mixed,dating
+AESPA_20240402_KARINA_BREAKUP,SM,aespa,Karina,dating,breakup,Karina and Lee Jae-wook confirm breakup,mixed,dating
+AESPA_20241211_WINTER_JUNGWON,SM,aespa,Winter,dating,denied_dating_rumor,Winter and Jungwon dating rumor denied by agencies,mixed,dating
+AESPA_20251205_WINTER_JUNGKOOK,SM,aespa,Winter,dating,viral_dating_rumor_no_comment,Winter and Jungkook viral dating rumor spreads online,mixed,dating
+BLACKPINK_20220523_JENNIE_V_RUMOR,YG,BLACKPINK,Jennie,dating,dating_rumor_agency_no_comment,Jennie and BTS V dating rumor begins with viral Jeju photo,mixed,dating
